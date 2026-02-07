@@ -1,0 +1,551 @@
+/* ============================================
+   vbtronic.com — Dark Engineering Aesthetic
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e0e0e0;
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Typography Scale --- */
+h1, h2, h3, h4, h5, h6 {
+  color: #f5f5f5;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.375rem; }
+h4 { font-size: 1.125rem; }
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+strong {
+  font-weight: 600;
+  color: #f5f5f5;
+}
+
+/* --- Layout --- */
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* --- Header --- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.site-logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s ease;
+}
+
+.site-logo:hover {
+  opacity: 0.8;
+}
+
+.site-logo .accent {
+  color: #00b4d8;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f5f5f5;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #00b4d8;
+}
+
+/* --- Main --- */
+.site-main {
+  flex: 1;
+  padding: 3rem 0;
+}
+
+/* --- Hero --- */
+.hero {
+  padding: 4rem 0 3rem;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #f5f5f5;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 300;
+  color: #999;
+  line-height: 1.6;
+  max-width: 560px;
+  margin-bottom: 2rem;
+}
+
+.hero-line {
+  width: 120px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #00b4d8, #0077b6, transparent);
+  background-size: 200% 100%;
+  animation: hero-line-glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes hero-line-glow {
+  0% {
+    opacity: 0.7;
+    background-position: 0% 0%;
+  }
+  100% {
+    opacity: 1;
+    background-position: 100% 0%;
+  }
+}
+
+/* --- Content Section (home) --- */
+.content-section {
+  padding: 2rem 0;
+}
+
+.content-section h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.content-section p {
+  color: #bbb;
+  line-height: 1.7;
+}
+
+.content-section a {
+  color: #00b4d8;
+  transition: color 0.2s ease;
+}
+
+.content-section a:hover {
+  color: #48cae4;
+}
+
+.content-section h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid #00b4d8;
+}
+
+.content-section h3 + p {
+  padding-left: 0.75rem;
+  color: #999;
+}
+
+/* --- Page Header (list pages) --- */
+.page-header {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-description {
+  color: #999;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+/* --- Posts List --- */
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.post-card {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.post-card:last-child {
+  border-bottom: none;
+}
+
+.post-card a {
+  display: block;
+  padding: 1.75rem 1.25rem;
+  border-radius: 6px;
+  margin: 0 -1.25rem;
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.post-card a:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 0 0 1px rgba(0, 180, 216, 0.08);
+}
+
+.post-card .post-date {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.02em;
+}
+
+.post-card .post-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin-bottom: 0.35rem;
+  transition: color 0.2s ease;
+}
+
+.post-card a:hover .post-title {
+  color: #00b4d8;
+}
+
+.post-card .post-excerpt {
+  font-size: 0.925rem;
+  color: #888;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* --- Single Post --- */
+.post {
+  max-width: 720px;
+}
+
+.post-header {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.post-header .post-date {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+.post-header .post-title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: 0.75rem;
+}
+
+.post-header .post-description {
+  font-size: 1.1rem;
+  color: #999;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* --- Post Content (Prose) --- */
+.post-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+
+.post-content h2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.post-content h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.post-content p {
+  margin-bottom: 1.35rem;
+}
+
+.post-content a {
+  color: #00b4d8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(0, 180, 216, 0.3);
+  transition: text-decoration-color 0.2s ease;
+}
+
+.post-content a:hover {
+  text-decoration-color: #00b4d8;
+}
+
+.post-content ul,
+.post-content ol {
+  margin-bottom: 1.35rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.4rem;
+}
+
+.post-content blockquote {
+  border-left: 3px solid #00b4d8;
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  background-color: rgba(0, 180, 216, 0.04);
+  border-radius: 0 4px 4px 0;
+  color: #bbb;
+  font-style: italic;
+}
+
+.post-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.post-content hr {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 2.5rem 0;
+}
+
+/* --- Code --- */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: #e0e0e0;
+}
+
+pre {
+  background-color: #111;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  line-height: 1.55;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.85rem;
+  color: #d4d4d4;
+}
+
+/* --- Tables --- */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.post-content th,
+.post-content td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.post-content th {
+  font-weight: 600;
+  color: #f5f5f5;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* --- Footer --- */
+.site-footer {
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  margin-top: 2rem;
+}
+
+.site-footer p {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 0;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.01em;
+}
+
+/* --- Selection --- */
+::selection {
+  background-color: rgba(0, 180, 216, 0.25);
+  color: #f5f5f5;
+}
+
+/* --- Scrollbar (Webkit) --- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .site-header .container {
+    height: 56px;
+  }
+
+  .site-nav {
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+  }
+
+  .site-logo {
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .site-main {
+    padding: 2rem 0;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+
+  .post-card a {
+    padding: 1.25rem 1rem;
+    margin: 0 -1rem;
+  }
+
+  .post-card .post-title {
+    font-size: 1.1rem;
+  }
+
+  pre {
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+}

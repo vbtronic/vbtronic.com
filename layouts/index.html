@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">Viktor Brunclík</h1>
+    <p class="hero-subtitle">{{ .Site.Params.description }}</p>
+    <div class="hero-line"></div>
+  </div>
+</section>
+
+<section class="content-section">
+  {{ .Content }}
+</section>
+{{ end }}

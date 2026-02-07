@@ -1,0 +1,26 @@
+baseURL = 'https://www.vbtronic.com/'
+languageCode = 'en-us'
+title = 'Viktor Brunclík'
+enableRobotsTXT = true
+enableEmoji = false
+
+[params]
+  description = "Viktor Brunclík — vbtronic.com"
+  author = "Viktor Brunclík"
+
+[markup]
+  [markup.highlight]
+    style = 'monokai'
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = 'Home'
+    url = '/'
+    weight = 1
+  [[menu.main]]
+    name = 'Posts'
+    url = '/posts/'
+    weight = 2
