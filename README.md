@@ -92,4 +92,6 @@ The primary domain is `www.vbtronic.com`, with the apex `vbtronic.com` redirecti
 
 ## License
 
-Content © Viktor Brunclík. All rights reserved.
+Source code is licensed under the [MIT License](LICENSE).
+
+Content (articles, blog posts, text) © Viktor Brunclík. All rights reserved.
