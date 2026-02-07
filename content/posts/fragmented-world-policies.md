@@ -4,8 +4,8 @@ description: "I think current world policies are just terribly fragmented — an
 date: 2026-02-07T12:00:00+01:00
 ---
 
-I honestly think that **current world policies** are just terribly fragmented. Every country does its own thing, international agreements fall apart, and nobody seems to be on the same page. Climate, trade, security — it's all over the place.
+I honestly think that **current world policies** are just terribly fragmented. Even allied countries can't seem to get on the same page. Climate, trade, security — they're supposed to be working together, but it's all over the place.
 
-It just doesn't make sense to me. Why can't world leaders agree on **one solid, unified approach** instead of this patchwork where every country pulls in a different direction? It makes everything harder for everyone.
+It really bugs me that **allied leaders can't agree** on a unified approach. If you're allies, why is everyone still pulling in a different direction? It just makes everything harder for everyone.
 
-This isn't a political opinion and I'm not picking any side — it's just something that really bugs me when I look at how the world works today.
+This isn't a political opinion and I'm not picking any side — it's just something that frustrates me when I look at how the world works today.
