@@ -1,12 +1,20 @@
 {{ define "main" }}
-<section class="page-header">
-  <h1>{{ .Title }}</h1>
-  {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
-</section>
+<div class="page-nav-bar">
+  <button class="nav-arrow" onclick="history.back()" title="Back">&larr;</button>
+  <div class="page-nav-title">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+  </div>
+  <button class="nav-arrow" onclick="history.forward()" title="Forward">&rarr;</button>
+</div>
 
-<section class="posts-list">
+<div class="search-box">
+  <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+</div>
+
+<section class="posts-list" id="posts-list">
   {{ range .Pages.ByDate.Reverse }}
-  <article class="post-card">
+  <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
     <a href="{{ .Permalink }}">
       <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
       <h2 class="post-title">{{ .Title }}</h2>
@@ -15,4 +23,34 @@
   </article>
   {{ end }}
 </section>
+
+<p class="no-results" id="no-results" style="display:none;">No results found.</p>
+
+<script>
+(function() {
+  var input = document.getElementById('search-input');
+  var list = document.getElementById('posts-list');
+  var noResults = document.getElementById('no-results');
+  if (!input || !list) return;
+
+  input.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    var cards = list.querySelectorAll('.post-card');
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var title = card.getAttribute('data-title') || '';
+      var desc = card.getAttribute('data-description') || '';
+      if (!query || title.indexOf(query) !== -1 || desc.indexOf(query) !== -1) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    noResults.style.display = visible === 0 ? '' : 'none';
+  });
+})();
+</script>
 {{ end }}

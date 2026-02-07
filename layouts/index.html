@@ -7,7 +7,21 @@
   </div>
 </section>
 
-<section class="content-section">
-  {{ .Content }}
+<section class="about-card">
+  <h2 class="about-heading">About Me</h2>
+  <div class="about-body">
+    {{ .Content }}
+  </div>
+  <div class="about-links">
+    <a href="/portfolio/" class="about-link">View Portfolio &rarr;</a>
+    <a href="/posts/" class="about-link">Read Posts &rarr;</a>
+  </div>
+</section>
+
+<section class="about-card" style="margin-top: 1.5rem;">
+  <h2 class="about-heading">About My Products</h2>
+  <div class="about-body">
+    <p>Coming soon — stay tuned for updates on my upcoming products and ventures.</p>
+  </div>
 </section>
 {{ end }}

@@ -1,20 +1,10 @@
 ---
 title: "Viktor Brunclík"
+description: "Future entrepreneur, builder, and creator."
 ---
 
-## About
+I'm Viktor Brunclík — a 10-year-old from Prague, Czech Republic, and a future entrepreneur with a passion for building things that matter.
 
-I'm an engineer and builder focused on crafting technology that matters. I work at the intersection of software, strategy, and systems thinking — turning complex problems into elegant solutions.
+This website is my personal space where I share my portfolio, achievements, and thoughts. As I grow, I'll also be showcasing my products and ventures here.
 
-## Projects
-
-Here are some of the things I've been building:
-
-### Project Alpha
-A brief description of Project Alpha. What it does, why it matters.
-
-### Project Beta
-A brief description of Project Beta. What it does, why it matters.
-
-### Project Gamma
-A brief description of Project Gamma. What it does, why it matters.
+Welcome to my journey.

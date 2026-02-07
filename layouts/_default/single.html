@@ -1,4 +1,10 @@
 {{ define "main" }}
+<div class="page-nav-bar page-nav-bar--single">
+  <button class="nav-arrow" onclick="history.back()" title="Back">&larr;</button>
+  <span class="nav-breadcrumb">{{ .Parent.Title }}</span>
+  <button class="nav-arrow" onclick="history.forward()" title="Forward">&rarr;</button>
+</div>
+
 <article class="post">
   <header class="post-header">
     <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
