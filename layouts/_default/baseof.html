@@ -33,5 +33,13 @@
       <p>&copy; {{ now.Year }} Viktor Brunclík</p>
     </div>
   </footer>
+  <script>
+  document.querySelectorAll('.post-content table').forEach(function(table) {
+    var wrap = document.createElement('div');
+    wrap.className = 'table-wrap';
+    table.parentNode.insertBefore(wrap, table);
+    wrap.appendChild(table);
+  });
+  </script>
 </body>
 </html>
