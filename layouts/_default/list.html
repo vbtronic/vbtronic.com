@@ -1,11 +1,11 @@
 {{ define "main" }}
 <div class="page-nav-bar">
-  <button class="nav-arrow" onclick="history.back()" title="Back">&larr;</button>
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back">&larr;</button>
   <div class="page-nav-title">
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
   </div>
-  <button class="nav-arrow" onclick="history.forward()" title="Forward">&rarr;</button>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
 </div>
 
 <div class="search-box">

@@ -1,4 +1,12 @@
 {{ define "main" }}
+<div class="page-nav-bar">
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back">&larr;</button>
+  <div class="page-nav-title">
+    <h1>Home</h1>
+  </div>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
+</div>
+
 <section class="hero">
   <div class="hero-content">
     <h1 class="hero-title">Viktor Brunclík</h1>
@@ -7,7 +15,25 @@
   </div>
 </section>
 
-<section class="about-card">
+<div class="search-box">
+  <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+</div>
+
+<section class="posts-list" id="search-results" style="display:none;">
+  {{ range .Site.RegularPages.ByDate.Reverse }}
+  <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
+    <a href="{{ .Permalink }}">
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      <h2 class="post-title">{{ .Title }}</h2>
+      {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
+    </a>
+  </article>
+  {{ end }}
+</section>
+
+<p class="no-results" id="no-results" style="display:none;">No results found.</p>
+
+<section class="about-card" id="about-me">
   <h2 class="about-heading">About Me</h2>
   <div class="about-body">
     {{ .Content }}
@@ -18,10 +44,47 @@
   </div>
 </section>
 
-<section class="about-card" style="margin-top: 1.5rem;">
+<section class="about-card" id="about-products" style="margin-top: 1.5rem;">
   <h2 class="about-heading">About My Products</h2>
   <div class="about-body">
     <p>Coming soon — stay tuned for updates on my upcoming products and ventures.</p>
   </div>
 </section>
+
+<script>
+(function() {
+  var input = document.getElementById('search-input');
+  var results = document.getElementById('search-results');
+  var noResults = document.getElementById('no-results');
+  if (!input || !results) return;
+
+  input.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    var cards = results.querySelectorAll('.post-card');
+
+    if (!query) {
+      results.style.display = 'none';
+      noResults.style.display = 'none';
+      cards.forEach(function(card) { card.style.display = ''; });
+      return;
+    }
+
+    results.style.display = '';
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var title = card.getAttribute('data-title') || '';
+      var desc = card.getAttribute('data-description') || '';
+      if (title.indexOf(query) !== -1 || desc.indexOf(query) !== -1) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    noResults.style.display = visible === 0 ? '' : 'none';
+  });
+})();
+</script>
 {{ end }}

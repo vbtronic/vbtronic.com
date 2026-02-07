@@ -284,10 +284,16 @@ strong {
   flex-shrink: 0;
 }
 
-.nav-arrow:hover {
+.nav-arrow:hover:not(.disabled) {
   background: rgba(0, 180, 216, 0.1);
   border-color: rgba(0, 180, 216, 0.3);
   color: #00b4d8;
+}
+
+.nav-arrow.disabled {
+  opacity: 0.3;
+  cursor: default;
+  pointer-events: none;
 }
 
 /* --- Search Box --- */
