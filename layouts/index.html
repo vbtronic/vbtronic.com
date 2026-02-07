@@ -23,7 +23,7 @@
   {{ range .Site.RegularPages.ByDate.Reverse }}
   <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
     <a href="{{ .Permalink }}">
-      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
       <h2 class="post-title">{{ .Title }}</h2>
       {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
     </a>
@@ -32,6 +32,24 @@
 </section>
 
 <p class="no-results" id="no-results" style="display:none;">No results found.</p>
+
+{{ $recent := first 3 .Site.RegularPages.ByDate.Reverse }}
+{{ if $recent }}
+<section class="latest-posts">
+  <h2 class="latest-posts-heading">Recently Added</h2>
+  <div class="latest-posts-grid">
+    {{ range $recent }}
+    <article class="latest-post-card">
+      <a href="{{ .Permalink }}">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+        <h3>{{ .Title }}</h3>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </a>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
 
 <section class="about-card" id="about-me">
   <h2 class="about-heading">About Me</h2>

@@ -1,11 +1,11 @@
 ---
-title: "Tvorba tohoto webu"
-description: "Navrhl a postavil jsem svůj osobní web od nuly s pomocí Hugo, GitHub Pages a AI nástrojů."
-date: 2025-01-01
+title: "Programming & Vibecoding"
+description: "I enjoy programming and vibecoding — this website is one example."
+date: 2026-02-07T19:04:00+01:00
 ---
 
-Tenhle web — **vbtronic.com** — jsem vytvořil společně s tátou. Při práci jsme používali AI nástroje **Amp** a **Claude Code**, které nám pomáhaly s kódem a designem.
+I love **programming** and **vibecoding** — using AI tools to help me build things faster. This very website is a great example.
 
-Web běží na statickém generátoru **Hugo** s vlastním tmavým motivem. Rozložení stránek (layouts) jsme psali ručně v HTML a CSS. O nasazení se stará automatický CI/CD pipeline přes **GitHub Actions**, který web při každém pushnutí na hlavní větev sestaví a nasadí na **GitHub Pages**.
+I built **vbtronic.com** together with my dad using **Amp** and **Claude Code**. The AI generated most of the code and design, and we put the whole site together in a single day.
 
-Na tomhle projektu jsem se naučil základy webového vývoje, práci se statickými generátory stránek, verzování pomocí Gitu a automatické nasazování.
+Through this project I learned the basics of web development, static site generators, Git, and automated deployment. And I'm always looking for the next thing to build!

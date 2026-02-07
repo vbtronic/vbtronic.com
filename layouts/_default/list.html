@@ -8,6 +8,8 @@
   <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
 </div>
 
+{{ if eq .Section "posts" }}
+
 {{ $latest := first 3 .Pages.ByDate.Reverse }}
 {{ if $latest }}
 <section class="latest-posts">
@@ -16,7 +18,7 @@
     {{ range $latest }}
     <article class="latest-post-card">
       <a href="{{ .Permalink }}">
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
         <h3>{{ .Title }}</h3>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </a>
@@ -30,7 +32,7 @@
   <div class="all-posts-header">
     <h2 class="all-posts-heading">All Posts</h2>
     <div class="filter-bar">
-      <button class="filter-btn active" data-sort="date">Date</button>
+      <button class="filter-btn active" data-sort="date">Date & Time</button>
       <button class="filter-btn" data-sort="alpha">A–Z</button>
       <button class="filter-btn" data-sort="size">Size</button>
       <button class="filter-btn disabled" data-sort="popularity" title="Coming soon">Popularity</button>
@@ -43,9 +45,9 @@
 
   <div class="posts-list" id="posts-list">
     {{ range .Pages.ByDate.Reverse }}
-    <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}" data-date="{{ .Date.Format "2006-01-02" }}" data-wordcount="{{ .WordCount }}">
+    <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}" data-date="{{ .Date.Format "2006-01-02T15:04:05" }}" data-wordcount="{{ .WordCount }}">
       <a href="{{ .Permalink }}">
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
         <h2 class="post-title">{{ .Title }}</h2>
         {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
       </a>
@@ -63,7 +65,6 @@
   var noResults = document.getElementById('no-results');
   if (!input || !list) return;
 
-  // Search
   input.addEventListener('input', function() {
     var query = this.value.toLowerCase().trim();
     var cards = list.querySelectorAll('.post-card');
@@ -83,7 +84,6 @@
     noResults.style.display = visible === 0 ? '' : 'none';
   });
 
-  // Sort
   var buttons = document.querySelectorAll('.filter-btn:not(.disabled)');
   buttons.forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -111,4 +111,54 @@
   });
 })();
 </script>
+
+{{ else }}
+
+<div class="search-box">
+  <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+</div>
+
+<section class="posts-list" id="posts-list">
+  {{ range .Pages.ByDate.Reverse }}
+  <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
+    <a href="{{ .Permalink }}">
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+      <h2 class="post-title">{{ .Title }}</h2>
+      {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
+    </a>
+  </article>
+  {{ end }}
+</section>
+
+<p class="no-results" id="no-results" style="display:none;">No results found.</p>
+
+<script>
+(function() {
+  var input = document.getElementById('search-input');
+  var list = document.getElementById('posts-list');
+  var noResults = document.getElementById('no-results');
+  if (!input || !list) return;
+
+  input.addEventListener('input', function() {
+    var query = this.value.toLowerCase().trim();
+    var cards = list.querySelectorAll('.post-card');
+    var visible = 0;
+
+    cards.forEach(function(card) {
+      var title = card.getAttribute('data-title') || '';
+      var desc = card.getAttribute('data-description') || '';
+      if (!query || title.indexOf(query) !== -1 || desc.indexOf(query) !== -1) {
+        card.style.display = '';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    noResults.style.display = visible === 0 ? '' : 'none';
+  });
+})();
+</script>
+
+{{ end }}
 {{ end }}
