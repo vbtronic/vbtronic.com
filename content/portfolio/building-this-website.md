@@ -1,9 +1,11 @@
 ---
-title: "Building This Website"
-description: "Designed and built my personal website from scratch using Hugo and a custom dark theme."
+title: "Tvorba tohoto webu"
+description: "Navrhl a postavil jsem svůj osobní web od nuly s pomocí Hugo, GitHub Pages a AI nástrojů."
 date: 2025-01-01
 ---
 
-I designed and built this website — **vbtronic.com** — from scratch. It runs on Hugo with a custom dark-themed layout and is deployed via GitHub Pages with CI/CD.
+Tenhle web — **vbtronic.com** — jsem vytvořil společně s tátou. Při práci jsme používali AI nástroje **Amp** a **Claude Code**, které nám pomáhaly s kódem a designem.
 
-This project taught me the basics of web development, static site generators, version control with Git, and continuous deployment.
+Web běží na statickém generátoru **Hugo** s vlastním tmavým motivem. Rozložení stránek (layouts) jsme psali ručně v HTML a CSS. O nasazení se stará automatický CI/CD pipeline přes **GitHub Actions**, který web při každém pushnutí na hlavní větev sestaví a nasadí na **GitHub Pages**.
+
+Na tomhle projektu jsem se naučil základy webového vývoje, práci se statickými generátory stránek, verzování pomocí Gitu a automatické nasazování.
