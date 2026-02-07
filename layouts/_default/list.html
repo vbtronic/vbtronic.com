@@ -13,7 +13,7 @@
 {{ $latest := first 3 .Pages.ByDate.Reverse }}
 {{ if $latest }}
 <section class="latest-posts">
-  <h2 class="latest-posts-heading">Latest Posts</h2>
+  <h2 class="latest-posts-heading">Recently Added</h2>
   <div class="latest-posts-grid">
     {{ range $latest }}
     <article class="latest-post-card">
@@ -114,23 +114,53 @@
 
 {{ else }}
 
-<div class="search-box">
-  <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
-</div>
-
-<section class="posts-list" id="posts-list">
-  {{ range .Pages.ByDate.Reverse }}
-  <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
-    <a href="{{ .Permalink }}">
-      <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
-      <h2 class="post-title">{{ .Title }}</h2>
-      {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
-    </a>
-  </article>
-  {{ end }}
+{{ $latest := first 3 .Pages.ByDate.Reverse }}
+{{ if $latest }}
+<section class="latest-posts">
+  <h2 class="latest-posts-heading">Recently Added</h2>
+  <div class="latest-posts-grid">
+    {{ range $latest }}
+    <article class="latest-post-card">
+      <a href="{{ .Permalink }}">
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+        <h3>{{ .Title }}</h3>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      </a>
+    </article>
+    {{ end }}
+  </div>
 </section>
+{{ end }}
 
-<p class="no-results" id="no-results" style="display:none;">No results found.</p>
+<section class="all-posts-box">
+  <div class="all-posts-header">
+    <h2 class="all-posts-heading">All {{ .Title }}</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-sort="date">Date & Time</button>
+      <button class="filter-btn" data-sort="alpha">A–Z</button>
+      <button class="filter-btn" data-sort="size">Size</button>
+      <button class="filter-btn disabled" data-sort="popularity" title="Coming soon">Popularity</button>
+    </div>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+  </div>
+
+  <div class="posts-list" id="posts-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}" data-date="{{ .Date.Format "2006-01-02T15:04:05" }}" data-wordcount="{{ .WordCount }}">
+      <a href="{{ .Permalink }}">
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+        <h2 class="post-title">{{ .Title }}</h2>
+        {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
+      </a>
+    </article>
+    {{ end }}
+  </div>
+
+  <p class="no-results" id="no-results" style="display:none;">No results found.</p>
+</section>
 
 <script>
 (function() {
@@ -156,6 +186,32 @@
     });
 
     noResults.style.display = visible === 0 ? '' : 'none';
+  });
+
+  var buttons = document.querySelectorAll('.filter-btn:not(.disabled)');
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelector('.filter-btn.active').classList.remove('active');
+      btn.classList.add('active');
+
+      var sortBy = btn.getAttribute('data-sort');
+      var cards = Array.from(list.querySelectorAll('.post-card'));
+
+      cards.sort(function(a, b) {
+        if (sortBy === 'date') {
+          return b.getAttribute('data-date').localeCompare(a.getAttribute('data-date'));
+        } else if (sortBy === 'alpha') {
+          return a.getAttribute('data-title').localeCompare(b.getAttribute('data-title'));
+        } else if (sortBy === 'size') {
+          return parseInt(b.getAttribute('data-wordcount') || '0') - parseInt(a.getAttribute('data-wordcount') || '0');
+        }
+        return 0;
+      });
+
+      cards.forEach(function(card) {
+        list.appendChild(card);
+      });
+    });
   });
 })();
 </script>
