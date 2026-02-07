@@ -18,7 +18,7 @@
     {{ range $latest }}
     <article class="latest-post-card">
       <a href="{{ .Permalink }}">
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
         <h3>{{ .Title }}</h3>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </a>
@@ -47,7 +47,7 @@
     {{ range .Pages.ByDate.Reverse }}
     <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}" data-date="{{ .Date.Format "2006-01-02T15:04:05" }}" data-wordcount="{{ .WordCount }}">
       <a href="{{ .Permalink }}">
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
         <h2 class="post-title">{{ .Title }}</h2>
         {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
       </a>
@@ -122,7 +122,7 @@
     {{ range $latest }}
     <article class="latest-post-card">
       <a href="{{ .Permalink }}">
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
         <h3>{{ .Title }}</h3>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </a>
@@ -151,7 +151,7 @@
     {{ range .Pages.ByDate.Reverse }}
     <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}" data-date="{{ .Date.Format "2006-01-02T15:04:05" }}" data-wordcount="{{ .WordCount }}">
       <a href="{{ .Permalink }}">
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }}</time>
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
         <h2 class="post-title">{{ .Title }}</h2>
         {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
       </a>
