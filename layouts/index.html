@@ -20,7 +20,7 @@
 </div>
 
 <section class="posts-list" id="search-results" style="display:none;">
-  {{ range .Site.RegularPages.ByDate.Reverse }}
+  {{ range where .Site.RegularPages.ByDate.Reverse ".Section" "!=" "help" }}
   <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
     <a href="{{ .Permalink }}">
       <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
@@ -33,7 +33,7 @@
 
 <p class="no-results" id="no-results" style="display:none;">No results found.</p>
 
-{{ $recent := first 3 .Site.RegularPages.ByDate.Reverse }}
+{{ $recent := first 3 (where .Site.RegularPages.ByDate.Reverse ".Section" "!=" "help") }}
 {{ if $recent }}
 <section class="latest-posts">
   <h2 class="latest-posts-heading">Recently Added</h2>
@@ -59,6 +59,7 @@
   <div class="about-links">
     <a href="/portfolio/" class="about-link">View Portfolio &rarr;</a>
     <a href="/posts/" class="about-link">Read Posts &rarr;</a>
+    <a href="/help/" class="about-link">Site Help &rarr;</a>
   </div>
 </section>
 

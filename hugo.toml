@@ -28,3 +28,7 @@ enableEmoji = false
     name = 'Posts'
     url = '/posts/'
     weight = 3
+  [[menu.main]]
+    name = 'Help'
+    url = '/help/'
+    weight = 4

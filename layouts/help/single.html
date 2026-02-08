@@ -1,0 +1,25 @@
+{{ define "main" }}
+<div class="page-nav-bar page-nav-bar--single">
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back">&larr;</button>
+  <span class="nav-breadcrumb"><a href="/help/" class="help-breadcrumb-link">Help</a></span>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
+</div>
+
+<article class="post help-article">
+  <header class="post-header help-header">
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
+  </header>
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+  <nav class="help-nav-footer">
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" class="help-nav-prev">&larr; {{ .Title }}</a>
+    {{ end }}
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" class="help-nav-next">{{ .Title }} &rarr;</a>
+    {{ end }}
+  </nav>
+</article>
+{{ end }}

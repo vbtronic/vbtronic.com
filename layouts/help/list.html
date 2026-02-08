@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="page-nav-bar">
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back">&larr;</button>
+  <div class="page-nav-title">
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+  </div>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
+</div>
+
+<section class="help-topics">
+  {{ range .Pages.ByWeight }}
+  <a href="{{ .RelPermalink }}" class="help-topic-card">
+    <div class="help-topic-content">
+      <h2 class="help-topic-title">{{ .Title }}</h2>
+      {{ with .Description }}<p class="help-topic-desc">{{ . }}</p>{{ end }}
+    </div>
+    <span class="help-topic-arrow">&rarr;</span>
+  </a>
+  {{ end }}
+</section>
+{{ end }}
