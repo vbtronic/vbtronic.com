@@ -2,7 +2,7 @@
 title: "E-shop Section"
 description: "What the E-shop will offer and when it will launch."
 date: 2026-02-09T12:00:00+01:00
-weight: 8
+weight: 7
 ---
 
 The **E-shop** is a planned feature that will allow visitors to browse and purchase digital products and services directly on vbtronic.com. It is currently under development.
@@ -22,7 +22,7 @@ The store is planned to feature four categories of products and services:
 - **Expert Articles** — In-depth technical texts and analyses available behind a paywall. These go beyond regular blog posts with detailed research and professional insights.
 - **Seminars** — In-person or online workshops on technical topics. Hands-on learning sessions with direct interaction.
 - **Webinars** — Live online lectures and Q&A sessions. Scheduled events you can join from anywhere.
-- **Products & Services** — Software, tools, and other digital products created by Viktor Brunclík.
+- **Products & Services** — Software, tools, and other digital products created under the VB Tronic brand.
 
 ## Coming Soon
 

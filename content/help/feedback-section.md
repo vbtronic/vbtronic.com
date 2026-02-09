@@ -2,7 +2,7 @@
 title: "Feedback Section"
 description: "How the Feedback section works and what to expect when it launches."
 date: 2026-02-08T12:00:00+01:00
-weight: 7
+weight: 6
 ---
 
 The **Feedback** section is a planned feature that will allow visitors to submit feedback directly on the site. It is currently under development.
