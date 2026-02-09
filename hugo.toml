@@ -36,3 +36,7 @@ enableEmoji = false
     name = 'Feedback'
     url = '/feedback/'
     weight = 5
+  [[menu.main]]
+    name = 'E-shop'
+    url = '/eshop/'
+    weight = 6

@@ -244,24 +244,44 @@ strong {
   margin-bottom: 0;
 }
 
+.feedback-terms-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  cursor: not-allowed;
+  text-align: left;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.feedback-terms-card-content {
+  flex: 1;
+}
+
 .feedback-terms-heading {
   font-size: 1.1rem;
   font-weight: 500;
   color: #f5f5f5;
-  margin-bottom: 1rem;
+  margin-bottom: 0.35rem;
 }
 
-.feedback-terms-box {
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 6px;
-  padding: 1.5rem;
-}
-
-.feedback-terms-empty {
-  text-align: center;
-  color: #666;
+.feedback-terms-desc {
   font-size: 0.875rem;
-  margin: 0;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.feedback-terms-arrow {
+  font-size: 1.25rem;
+  color: #555;
+  margin-left: 1rem;
+  flex-shrink: 0;
 }
 
 /* --- Feedback Coming Soon --- */
@@ -1003,6 +1023,167 @@ pre code {
   color: #48cae4;
 }
 
+/* --- E-shop (disabled preview) --- */
+.eshop-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
+  margin-bottom: 2.5rem;
+}
+
+.eshop-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eshop-cart-btn svg {
+  flex-shrink: 0;
+}
+
+.eshop-products-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.eshop-product-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.eshop-product-item:last-child {
+  border-bottom: none;
+}
+
+.eshop-product-item-info {
+  flex: 1;
+}
+
+.eshop-product-item-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin-bottom: 0.25rem;
+}
+
+.eshop-product-item-price {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 0;
+}
+
+.eshop-product-item-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.eshop-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border-radius: 6px;
+  cursor: not-allowed;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.eshop-btn svg {
+  flex-shrink: 0;
+}
+
+.eshop-btn-cart {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #999;
+}
+
+.eshop-btn-buy {
+  background: rgba(0, 180, 216, 0.15);
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  color: #00b4d8;
+}
+
+.eshop-terms {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.eshop-terms-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  cursor: not-allowed;
+  text-align: left;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.eshop-terms-card-content {
+  flex: 1;
+}
+
+.eshop-terms-heading {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f5f5f5;
+  margin-bottom: 0.35rem;
+}
+
+.eshop-terms-desc {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.eshop-terms-arrow {
+  font-size: 1.25rem;
+  color: #555;
+  margin-left: 1rem;
+  flex-shrink: 0;
+}
+
+/* --- E-shop Coming Soon --- */
+.eshop-coming-soon {
+  margin-top: 1rem;
+}
+
+.eshop-coming-soon-inner {
+  border: 1px solid rgba(0, 180, 216, 0.3);
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.eshop-coming-soon-inner h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00b4d8;
+  margin-bottom: 0.75rem;
+}
+
+.eshop-coming-soon-inner p {
+  color: #999;
+  font-size: 0.9rem;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
 /* --- Responsive --- */
 
 /* Tablet */
@@ -1049,6 +1230,17 @@ pre code {
 
 /* Mobile */
 @media (max-width: 640px) {
+  .eshop-product-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .eshop-product-item-actions {
+    margin-left: 0;
+  }
+
   .site-header .container {
     height: 56px;
   }
