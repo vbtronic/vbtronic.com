@@ -9,7 +9,7 @@
 
 <section class="hero">
   <div class="hero-content">
-    <h1 class="hero-title">Viktor Brunclík</h1>
+    <h1 class="hero-title">VB Tronic</h1>
     <p class="hero-subtitle">{{ .Site.Params.description }}</p>
     <div class="hero-line"></div>
   </div>
@@ -20,7 +20,7 @@
 </div>
 
 <section class="posts-list" id="search-results" style="display:none;">
-  {{ range where .Site.RegularPages.ByDate.Reverse ".Section" "!=" "help" }}
+  {{ range where .Site.RegularPages.ByDate.Reverse ".Section" "about" }}
   <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
     <a href="{{ .Permalink }}">
       <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
@@ -33,7 +33,7 @@
 
 <p class="no-results" id="no-results" style="display:none;">No results found.</p>
 
-{{ $recent := first 3 (where .Site.RegularPages.ByDate.Reverse ".Section" "!=" "help") }}
+{{ $recent := first 3 (where .Site.RegularPages.ByDate.Reverse ".Section" "about") }}
 {{ if $recent }}
 <section class="latest-posts">
   <h2 class="latest-posts-heading">Recently Added</h2>
@@ -51,22 +51,16 @@
 </section>
 {{ end }}
 
-<section class="about-card" id="about-me">
-  <h2 class="about-heading">About Me</h2>
+<section class="about-card" id="about-web">
+  <h2 class="about-heading">About This Web</h2>
   <div class="about-body">
-    {{ .Content }}
+    <p>Welcome to <strong>VB Tronic</strong> — a commercial platform and central hub created by Viktor Brunclík. Browse expert articles, seminars, webinars, and digital products, or explore Viktor's portfolio and articles.</p>
   </div>
   <div class="about-links">
-    <a href="/portfolio/" class="about-link">View Portfolio &rarr;</a>
-    <a href="/posts/" class="about-link">Read Posts &rarr;</a>
+    <a href="/about/" class="about-link">About Viktor Brunclík &rarr;</a>
+    <a href="/eshop/" class="about-link">E-shop &rarr;</a>
     <a href="/help/" class="about-link">Site Help &rarr;</a>
-  </div>
-</section>
-
-<section class="about-card" id="about-products" style="margin-top: 1.5rem;">
-  <h2 class="about-heading">About My Products</h2>
-  <div class="about-body">
-    <p>Coming soon — stay tuned for updates on my upcoming products and ventures.</p>
+    <a href="/feedback/" class="about-link">Feedback &rarr;</a>
   </div>
 </section>
 

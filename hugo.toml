@@ -21,22 +21,18 @@ enableEmoji = false
     url = '/'
     weight = 1
   [[menu.main]]
-    name = 'Portfolio'
-    url = '/portfolio/'
+    name = 'About Viktor Brunclík'
+    url = '/about/'
     weight = 2
-  [[menu.main]]
-    name = 'Posts'
-    url = '/posts/'
-    weight = 3
   [[menu.main]]
     name = 'Help'
     url = '/help/'
-    weight = 4
+    weight = 3
   [[menu.main]]
     name = 'Feedback'
     url = '/feedback/'
-    weight = 5
+    weight = 4
   [[menu.main]]
     name = 'E-shop'
     url = '/eshop/'
-    weight = 6
+    weight = 5
