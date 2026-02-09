@@ -9,7 +9,7 @@ There are several ways to move around vbtronic.com.
 
 ## Navigation bar
 
-The sticky header at the top of every page contains the site logo (**vbtronic.com**) and links to all main sections: **Home**, **Portfolio**, **Posts**, and **Help**. The currently active section is underlined.
+The sticky header at the top of every page contains the site logo (**vbtronic.com**) and links to all main sections: **Home**, **Portfolio**, **Posts**, **Help**, and **Feedback**. The currently active section is underlined.
 
 The header stays visible as you scroll, so you can always switch sections quickly.
 

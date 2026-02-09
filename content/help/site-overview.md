@@ -13,12 +13,13 @@ This is where Viktor shares his portfolio of achievements and projects, writes p
 
 ## How is the site organized?
 
-The site has four main sections, all accessible from the navigation bar at the top:
+The site has five main sections, all accessible from the navigation bar at the top:
 
 - **Home** — The landing page with a hero section, global search bar, recently added content, and an "About Me" card.
 - **Portfolio** — Achievements, projects, and milestones. Things Viktor has built or accomplished.
 - **Posts** — Thoughts, opinions, analysis, and strategies. Longer articles on topics that matter to Viktor.
 - **Help** — The section you are reading now. A guide to using this website.
+- **Feedback** — A planned section where visitors will be able to submit feedback, which is evaluated and analyzed by AI. Currently under development (coming soon).
 
 ## How was it built?
 

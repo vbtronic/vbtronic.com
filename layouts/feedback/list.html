@@ -1,0 +1,51 @@
+{{ define "main" }}
+<div class="page-nav-bar">
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back">&larr;</button>
+  <div class="page-nav-title">
+    <h1>{{ .Title }}</h1>
+  </div>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
+</div>
+
+<div class="feedback-disabled">
+  <p class="feedback-ai-notice">Feedback is evaluated and analyzed by AI</p>
+
+  <div class="feedback-actions">
+    <button class="feedback-add-btn" disabled title="Coming soon">
+      <span class="feedback-add-icon">+</span>
+    </button>
+  </div>
+
+  <section class="all-posts-box">
+    <div class="all-posts-header">
+      <h2 class="all-posts-heading">Your Feedback</h2>
+      <div class="filter-bar">
+        <button class="filter-btn active" disabled>Date &amp; Time</button>
+        <button class="filter-btn" disabled>A–Z</button>
+        <button class="filter-btn" disabled>Size</button>
+        <button class="filter-btn disabled" disabled>Popularity</button>
+      </div>
+    </div>
+    <div class="search-box">
+      <input type="text" id="search-input" placeholder="Search feedback..." disabled autocomplete="off">
+    </div>
+    <div class="feedback-history-list">
+      <div class="feedback-empty">No feedback yet.</div>
+    </div>
+  </section>
+
+  <section class="feedback-terms">
+    <h2 class="feedback-terms-heading">Terms of Feedback</h2>
+    <div class="feedback-terms-box">
+      <p class="feedback-terms-empty">Terms will be available soon.</p>
+    </div>
+  </section>
+</div>
+
+<section class="feedback-coming-soon">
+  <div class="feedback-coming-soon-inner">
+    <h2>Coming Soon</h2>
+    <p>The Feedback section is currently under development. Once this site moves to a dynamic platform, you will be able to submit feedback and browse your history here.</p>
+  </div>
+</section>
+{{ end }}
