@@ -1,25 +1,25 @@
 ---
 title: "Site Overview"
-description: "Learn what vbtronic.com is about and how it is organized."
+description: "Learn what VB Tronic is about and how the site is organized."
 date: 2026-02-08T12:00:00+01:00
 weight: 1
 ---
 
-Welcome to **vbtronic.com** — the personal website of Viktor Brunclík.
+Welcome to **vbtronic.com** — the official website of **VB Tronic**, created by Viktor Brunclík.
 
 ## What is this site?
 
-This is where Viktor shares his portfolio of achievements and projects, writes posts about topics that interest him, and documents his journey as a young builder and future entrepreneur.
+VB Tronic is a commercial platform and central hub where Viktor presents his projects, shares articles and opinions, and offers products and services. The site serves as a starting point — when you hear about a new service or product from VB Tronic, you come here and find your way to the dedicated website for that service.
 
 ## How is the site organized?
 
 The site has five main sections, all accessible from the navigation bar at the top:
 
-- **Home** — The landing page with a hero section, global search bar, recently added content, and an "About Me" card.
-- **Portfolio** — Achievements, projects, and milestones. Things Viktor has built or accomplished.
-- **Posts** — Thoughts, opinions, analysis, and strategies. Longer articles on topics that matter to Viktor.
+- **Home** — The landing page with a hero section, global search bar, recently added content, an "About This Web" card, and links to all sections with emphasis on the E-shop.
+- **About Viktor Brunclík** — Everything about Viktor in one place: portfolio items, articles, achievements, and opinions, with search and filtering.
 - **Help** — The section you are reading now. A guide to using this website.
 - **Feedback** — A planned section where visitors will be able to submit feedback, which is evaluated and analyzed by AI. Currently under development (coming soon).
+- **E-shop** — A planned store for expert articles, seminars, webinars, and digital products (coming soon).
 
 ## How was it built?
 
