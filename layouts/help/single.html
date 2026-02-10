@@ -1,8 +1,8 @@
 {{ define "main" }}
 <div class="page-nav-bar page-nav-bar--single">
-  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back">&larr;</button>
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
   <span class="nav-breadcrumb"><a href="/help/" class="help-breadcrumb-link">Help</a></span>
-  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
 <article class="post help-article">
@@ -15,10 +15,10 @@
   </div>
   <nav class="help-nav-footer">
     {{ with .NextInSection }}
-    <a href="{{ .RelPermalink }}" class="help-nav-prev">&larr; {{ .Title }}</a>
+    <a href="{{ .RelPermalink }}" class="help-nav-prev"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> {{ .Title }}</a>
     {{ end }}
     {{ with .PrevInSection }}
-    <a href="{{ .RelPermalink }}" class="help-nav-next">{{ .Title }} &rarr;</a>
+    <a href="{{ .RelPermalink }}" class="help-nav-next">{{ .Title }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
     {{ end }}
   </nav>
 </article>

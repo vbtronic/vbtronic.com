@@ -1,21 +1,24 @@
 {{ define "main" }}
 <div class="page-nav-bar">
-  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back">&larr;</button>
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
   <div class="page-nav-title">
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
   </div>
-  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward">&rarr;</button>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
 <section class="help-topics">
   {{ range .Pages.ByWeight }}
   <a href="{{ .RelPermalink }}" class="help-topic-card">
+    <div class="help-topic-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    </div>
     <div class="help-topic-content">
       <h2 class="help-topic-title">{{ .Title }}</h2>
       {{ with .Description }}<p class="help-topic-desc">{{ . }}</p>{{ end }}
     </div>
-    <span class="help-topic-arrow">&rarr;</span>
+    <span class="help-topic-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
   </a>
   {{ end }}
 </section>
