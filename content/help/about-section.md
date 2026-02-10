@@ -32,3 +32,7 @@ The item list has a search bar that filters items in real time as you type. You 
 - **Size** — Sort by word count (longest first).
 
 Click any item to read the full article.
+
+## Terms of About
+
+Below the item list, you will find a **Terms of About** card. This will contain the terms and conditions for interactions within this section (such as likes, dislikes, and user accounts). The card is currently disabled and will become available once the site transitions to a dynamic platform.

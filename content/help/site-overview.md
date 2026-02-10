@@ -21,6 +21,18 @@ The site has five main sections, all accessible from the navigation bar at the t
 - **Feedback** — A planned section where visitors will be able to submit feedback, which is evaluated and analyzed by AI. Currently under development (coming soon).
 - **E-shop** — A planned store for expert articles, seminars, webinars, and digital products (coming soon).
 
+## Footer and legal notices
+
+Every page includes a footer with:
+
+- **Copyright notice** — © Viktor Brunclík. All rights reserved.
+- **AI disclosure** — States that this website and its articles are created with the help of AI tools.
+- **Privacy Policy** — A placeholder card for the site's privacy policy (coming soon).
+- **Cookie Preferences** — A placeholder card for cookie consent settings (coming soon).
+- **Cookie consent banner** — A fixed bar at the bottom of the screen with "Accept All" and "Manage Preferences" buttons (currently disabled).
+
+These legal elements are currently disabled and will become functional once the site transitions to a dynamic platform.
+
 ## How was it built?
 
 The site is built with [Hugo](https://gohugo.io/) (a static site generator) and hosted on GitHub Pages. Viktor built it together with his dad using the AI tools **Amp** and **Claude Code**. The design follows a dark engineering aesthetic with a cyan accent color.
