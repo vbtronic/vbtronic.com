@@ -2,5 +2,6 @@
 /resources/_gen/
 /.hugo_build.lock
 .DS_Store
+.claude/
 businessplan.md
 legal.md
