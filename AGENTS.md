@@ -33,6 +33,7 @@ hugo new posts/my-post-title.md
 - Posts go in `content/posts/` with frontmatter: `title`, `date`, `description`
 - Home page content is in `content/_index.md`
 - Images should be placed in `static/images/`
+- **Date/time in frontmatter must use the actual current time** — never hardcode `12:00:00` or guess. Use `date` command to get the real time before creating content
 
 ## Code Conventions
 
@@ -49,7 +50,7 @@ hugo new posts/my-post-title.md
 - Font body: Inter
 - Font mono: JetBrains Mono
 - Container max-width: 800px
-- Dark theme only
+- Dark/light theme with toggle
 
 ## Deployment
 
