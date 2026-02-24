@@ -5,7 +5,7 @@ description: "Bio, achievements, and timeline."
 
 ## Bio
 
-I'm Viktor Brunclík — a 10-year-old from Prague, Czech Republic. I love technology, programming, reading, and learning new things every day.
+I'm Viktor Brunclík — an 11-year-old from Prague, Czech Republic. I love technology, programming, reading, and learning new things every day.
 
 This website is my personal space where I share my work, opinions, and achievements. It is built with Hugo and deployed on GitHub Pages.
 

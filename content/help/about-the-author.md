@@ -7,7 +7,7 @@ weight: 9
 
 ## Viktor Brunclík
 
-Viktor is a 10-year-old from Prague, Czech Republic. He loves technology, programming, reading, and learning new things.
+Viktor is an 11-year-old from Prague, Czech Republic. He loves technology, programming, reading, and learning new things.
 
 This website is his personal space where he shares his work, opinions, and achievements.
 
