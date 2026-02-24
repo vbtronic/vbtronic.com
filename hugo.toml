@@ -21,18 +21,30 @@ enableEmoji = false
     url = '/'
     weight = 1
   [[menu.main]]
+    name = 'News'
+    url = '/news/'
+    weight = 2
+  [[menu.main]]
     name = 'About Viktor Brunclík'
     url = '/about/'
-    weight = 2
+    weight = 3
+  [[menu.main]]
+    name = 'Posts'
+    url = '/posts/'
+    weight = 4
+  [[menu.main]]
+    name = 'Portfolio'
+    url = '/portfolio/'
+    weight = 5
+  [[menu.main]]
+    name = 'Contact'
+    url = '/contact/'
+    weight = 6
   [[menu.main]]
     name = 'Help'
     url = '/help/'
-    weight = 3
+    weight = 7
   [[menu.main]]
-    name = 'Feedback'
-    url = '/feedback/'
-    weight = 4
-  [[menu.main]]
-    name = 'E-shop'
-    url = '/eshop/'
-    weight = 5
+    name = 'Privacy Policy'
+    url = '/privacy/'
+    weight = 8

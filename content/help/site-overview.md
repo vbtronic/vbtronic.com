@@ -5,34 +5,33 @@ date: 2026-02-08T12:00:00+01:00
 weight: 1
 ---
 
-Welcome to **vbtronic.com** — the official website of **VB Tronic**, created by Viktor Brunclík.
+Welcome to **vbtronic.com** — the personal website of Viktor Brunclík.
 
 ## What is this site?
 
-VB Tronic is a commercial platform and central hub where Viktor presents his projects, shares articles and opinions, and offers products and services. The site serves as a starting point — when you hear about a new service or product from VB Tronic, you come here and find your way to the dedicated website for that service.
+VB Tronic is a non-commercial personal website where Viktor presents his projects, shares articles and opinions, and showcases his portfolio and achievements.
 
 ## How is the site organized?
 
-The site has five main sections, all accessible from the navigation bar at the top:
+The site has eight main sections, all accessible from the navigation bar:
 
-- **Home** — The landing page with a hero section, global search bar, recently added content, an "About This Web" card, and links to all sections with emphasis on the E-shop.
-- **About Viktor Brunclík** — Everything about Viktor in one place: portfolio items, articles, achievements, and opinions, with search and filtering.
+- **Home** — The landing page with a hero section, global search bar, recently added content, and links to all sections.
+- **News** — The 10 most recently published items from across the site.
+- **About Viktor Brunclík** — A bio page with Viktor's background and timeline.
+- **Posts** — Blog posts, opinions, and thoughts by Viktor.
+- **Portfolio** — Projects, achievements, certificates, and creative work.
+- **Contact** — Email contact information.
 - **Help** — The section you are reading now. A guide to using this website.
-- **Feedback** — A planned section where visitors will be able to submit feedback, which is evaluated and analyzed by AI. Currently under development (coming soon).
-- **E-shop** — A planned store for expert articles, seminars, webinars, and digital products (coming soon).
+- **Privacy Policy** — How this site handles your data.
 
-## Footer and legal notices
+## Footer
 
 Every page includes a footer with:
 
-- **Copyright notice** — © Viktor Brunclík. All rights reserved.
+- **Copyright notice** — All rights reserved.
 - **AI disclosure** — States that this website and its articles are created with the help of AI tools.
-- **Privacy Policy** — A placeholder card for the site's privacy policy (coming soon).
-- **Cookie Preferences** — A placeholder card for cookie consent settings (coming soon).
-- **Cookie consent banner** — A fixed bar at the bottom of the screen with "Accept All" and "Manage Preferences" buttons (currently disabled).
-
-These legal elements are currently disabled and will become functional once the site transitions to a dynamic platform.
+- **Privacy Policy** — A link to the site's privacy policy page.
 
 ## How was it built?
 
-The site is built with [Hugo](https://gohugo.io/) (a static site generator) and hosted on GitHub Pages. Viktor built it together with his dad using the AI tools **Amp** and **Claude Code**. The design follows a dark engineering aesthetic with a cyan accent color.
+The site is built with [Hugo](https://gohugo.io/) (a static site generator) and hosted on GitHub Pages. Viktor built it together with his dad using the AI tools **Amp** and **Claude Code**. The design features a dark/light theme toggle with a cyan accent color.

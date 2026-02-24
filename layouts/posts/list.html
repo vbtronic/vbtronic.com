@@ -8,6 +8,8 @@
   <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
+{{ if .Pages }}
+
 {{ $latest := first 3 .Pages.ByDate.Reverse }}
 {{ if $latest }}
 <section class="latest-posts">
@@ -28,7 +30,7 @@
 
 <section class="all-posts-box">
   <div class="all-posts-header">
-    <h2 class="all-posts-heading">All {{ .Title }}</h2>
+    <h2 class="all-posts-heading">All Posts</h2>
     <div class="filter-bar">
       <button class="filter-btn active" data-sort="date">Date & Time</button>
       <button class="filter-btn" data-sort="alpha">A–Z</button>
@@ -108,4 +110,12 @@
   });
 })();
 </script>
+
+{{ else }}
+
+<section class="all-posts-box">
+  <p class="no-results">No posts published yet. Check back soon!</p>
+</section>
+
+{{ end }}
 {{ end }}

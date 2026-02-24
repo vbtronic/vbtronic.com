@@ -8,9 +8,24 @@
   <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
-<article class="post">
-  <div class="post-content">
-    {{ .Content }}
-  </div>
-</article>
+{{ $allPages := where .Site.RegularPages "Section" "ne" "help" }}
+{{ $allPages = where $allPages "Section" "ne" "privacy" }}
+{{ $newest := first 10 (sort $allPages "Date" "desc") }}
+
+{{ if $newest }}
+<section class="posts-list">
+  {{ range $newest }}
+  <article class="post-card">
+    <a href="{{ .Permalink }}">
+      <span class="post-section-badge">{{ .Section | title }}</span>
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
+      <h2 class="post-title">{{ .Title }}</h2>
+      {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
+    </a>
+  </article>
+  {{ end }}
+</section>
+{{ else }}
+<p class="no-results">No content published yet.</p>
+{{ end }}
 {{ end }}
