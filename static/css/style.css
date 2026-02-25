@@ -913,6 +913,106 @@ strong {
   margin-bottom: 0;
 }
 
+/* --- Featured Post Card --- */
+.featured-card {
+  background-color: var(--color-surface-1);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.featured-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-deep), transparent);
+  opacity: 1;
+}
+
+.featured-card:hover {
+  border-color: var(--color-accent-border);
+  background-color: var(--color-accent-surface);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.featured-card a {
+  display: block;
+  padding: 2rem;
+}
+
+.featured-card .featured-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.featured-card .post-section-badge {
+  margin-bottom: 0.25rem;
+}
+
+.featured-card .post-date {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--color-text-faint);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.featured-card .featured-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-text-heading);
+  margin-bottom: 0.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  transition: color 0.2s ease;
+}
+
+.featured-card:hover .featured-title {
+  color: var(--color-accent);
+}
+
+.featured-card .featured-excerpt {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.featured-card .featured-excerpt p:last-child {
+  margin-bottom: 0;
+}
+
+.featured-card .featured-read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  margin-top: 1rem;
+  transition: gap 0.2s ease;
+}
+
+.featured-card:hover .featured-read-more {
+  gap: 0.6rem;
+}
+
 /* --- Single Post --- */
 .post {
   max-width: 720px;
@@ -1159,6 +1259,7 @@ pre code {
   flex-shrink: 0;
 }
 
+
 /* --- News Section Badge --- */
 .post-section-badge {
   display: inline-block;
@@ -1391,6 +1492,14 @@ pre code {
   .latest-posts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .featured-card a {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .featured-card .featured-title {
+    font-size: 1.35rem;
+  }
 }
 
 /* Mobile */
@@ -1471,6 +1580,18 @@ pre code {
 
   .nav-breadcrumb {
     font-size: 0.8rem;
+  }
+
+  .featured-card a {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .featured-card .featured-title {
+    font-size: 1.2rem;
+  }
+
+  .featured-card .featured-excerpt {
+    font-size: 0.95rem;
   }
 
   .latest-posts-grid {
@@ -1602,6 +1723,7 @@ pre code {
     flex-direction: column;
     gap: 0.75rem;
   }
+
 }
 
 /* Small phones */
@@ -1643,6 +1765,14 @@ pre code {
     font-size: 0.9rem;
   }
 
+  .featured-card a {
+    padding: 1.25rem 1rem;
+  }
+
+  .featured-card .featured-title {
+    font-size: 1.1rem;
+  }
+
   .post-card a {
     padding: 1rem 0.75rem;
     margin: 0 -0.75rem;
@@ -1664,4 +1794,5 @@ pre code {
   .help-topic-title {
     font-size: 1rem;
   }
+
 }

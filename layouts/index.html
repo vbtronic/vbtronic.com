@@ -7,6 +7,20 @@
   <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
 </div>
 
+{{ $allContent := where .Site.RegularPages "Section" "ne" "help" }}
+{{ $allContent = where $allContent "Section" "ne" "privacy" }}
+{{ $sorted := sort $allContent "Date" "desc" }}
+{{ if $sorted }}
+{{ $featured := index $sorted 0 }}
+<article class="featured-card">
+  <a href="{{ $featured.Permalink }}">
+    <time class="post-date" datetime="{{ $featured.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $featured.Date.Format "Jan 2, 2006 15:04" }} CET</time>
+    <h2 class="featured-title">{{ $featured.Title }}</h2>
+    <div class="featured-excerpt">{{ $featured.Summary }}</div>
+  </a>
+</article>
+{{ end }}
+
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">
@@ -51,26 +65,6 @@
 </section>
 
 <p class="no-results" id="no-results" style="display:none;">No results found.</p>
-
-{{ $allContent := where .Site.RegularPages "Section" "ne" "help" }}
-{{ $allContent = where $allContent "Section" "ne" "privacy" }}
-{{ $recent := first 3 (sort $allContent "Date" "desc") }}
-{{ if $recent }}
-<section class="latest-posts">
-  <h2 class="latest-posts-heading">Recently Added</h2>
-  <div class="latest-posts-grid">
-    {{ range $recent }}
-    <article class="latest-post-card">
-      <a href="{{ .Permalink }}">
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
-        <h3>{{ .Title }}</h3>
-        {{ with .Description }}<p>{{ . }}</p>{{ end }}
-      </a>
-    </article>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
 
 <section class="about-card" id="about-web">
   <h2 class="about-heading">

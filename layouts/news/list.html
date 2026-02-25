@@ -13,8 +13,21 @@
 {{ $newest := first 10 (sort $allPages "Date" "desc") }}
 
 {{ if $newest }}
+
+{{ $featured := index $newest 0 }}
+<article class="featured-card">
+  <a href="{{ $featured.Permalink }}">
+    <span class="post-section-badge">{{ $featured.Section | title }}</span>
+    <time class="post-date" datetime="{{ $featured.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $featured.Date.Format "Jan 2, 2006 15:04" }} CET</time>
+    <h2 class="featured-title">{{ $featured.Title }}</h2>
+    <div class="featured-excerpt">{{ $featured.Summary }}</div>
+  </a>
+</article>
+
+{{ $rest := after 1 $newest }}
+{{ if $rest }}
 <section class="posts-list">
-  {{ range $newest }}
+  {{ range $rest }}
   <article class="post-card">
     <a href="{{ .Permalink }}">
       <span class="post-section-badge">{{ .Section | title }}</span>
@@ -25,6 +38,8 @@
   </article>
   {{ end }}
 </section>
+{{ end }}
+
 {{ else }}
 <p class="no-results">No content published yet.</p>
 {{ end }}

@@ -2,7 +2,7 @@
 title: "About the Author"
 description: "Learn about Viktor Brunclík, the creator of VB Tronic."
 date: 2026-02-08T12:00:00+01:00
-weight: 9
+weight: 10
 ---
 
 ## Viktor Brunclík

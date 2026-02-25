@@ -3,6 +3,7 @@ languageCode = 'en-us'
 title = 'Viktor Brunclík'
 enableRobotsTXT = true
 enableEmoji = false
+disableKinds = ['RSS']
 
 [params]
   description = "Viktor Brunclík — vbtronic.com"
