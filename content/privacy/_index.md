@@ -35,7 +35,7 @@ The site uses sessionStorage to power the back/forward navigation arrows. This d
 
 ## Your Rights
 
-Since we do not collect personal data, there is generally nothing to request access to or delete. If you have contacted us by email, you may request deletion of your correspondence by sending an email to the address below with the subject "Deletion request". We will delete all emails associated with your address and confirm the deletion.
+Since we do not collect personal data, there is generally nothing to request access to or delete. If you have contacted us by email, you may request deletion of your correspondence by sending an email to the address below with the subject "Deletion request". We will delete all emails associated with your address and confirm the deletion. The deletion confirmation email itself is retained as proof that the request was fulfilled.
 
 ## Contact
 
