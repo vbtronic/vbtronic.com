@@ -9,8 +9,6 @@ I'm Viktor Brunclík — an 11-year-old from Prague, Czech Republic. I love tech
 
 This website is my personal space where I share my work, opinions, and achievements. It is built with Hugo and deployed on GitHub Pages.
 
-This website and its articles are created by **Viktor Brunclík** with the help of AI tools **Amp** and **Claude Code**.
-
 ## Links
 
 - [GitHub](https://github.com/vbtronic)
