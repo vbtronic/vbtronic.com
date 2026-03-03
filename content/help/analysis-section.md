@@ -1,11 +1,11 @@
 ---
-title: "Analysis & Blog Section"
-description: "What the Analysis & Blog section contains and how to navigate it."
+title: "Analyses Section"
+description: "What the Analyses section contains and how to navigate it."
 date: 2026-03-03T12:00:00+01:00
 weight: 4
 ---
 
-The **Analysis & Blog** section is where Viktor shares in-depth articles, analyses, and longer-form writing on various topics.
+The **Analyses** section is where Viktor shares in-depth articles, analyses, and longer-form writing on various topics.
 
 ## What is in this section?
 

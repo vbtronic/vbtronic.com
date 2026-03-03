@@ -9,13 +9,13 @@ vbtronic.com has built-in search and filtering to help you find content quickly.
 
 ## Home page search
 
-The home page has a global search bar near the top. As you type, it shows matching results from all content sections (Analysis & Blog, Posts, Portfolio). The search checks both the title and description of each item. If nothing matches, a "No results found" message appears.
+The home page has a global search bar near the top. As you type, it shows matching results from all content sections (Analyses, Posts, Portfolio). The search checks both the title and description of each item. If nothing matches, a "No results found" message appears.
 
 When you clear the search box, the results disappear and the normal home page layout returns.
 
 ## Section search
 
-The **Analysis & Blog**, **Posts**, and **Portfolio** sections each have their own search bar inside the "All Items" / "All Articles" / "All Posts" area. This works the same way — type to filter, and items that do not match are hidden instantly.
+The **Analyses**, **Posts**, and **Portfolio** sections each have their own search bar inside the "All Items" / "All Articles" / "All Posts" area. This works the same way — type to filter, and items that do not match are hidden instantly.
 
 ## Sort filters
 
