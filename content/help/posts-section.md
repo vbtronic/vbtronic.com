@@ -2,7 +2,7 @@
 title: "Posts Section"
 description: "What the Posts section contains and how to navigate it."
 date: 2026-02-24T12:00:00+01:00
-weight: 4
+weight: 5
 ---
 
 The **Posts** section is where Viktor shares blog posts, opinions, and thoughts on various topics.

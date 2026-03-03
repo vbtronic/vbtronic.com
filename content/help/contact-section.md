@@ -2,7 +2,7 @@
 title: "Contact Section"
 description: "How to get in touch with Viktor Brunclík."
 date: 2026-02-24T12:00:00+01:00
-weight: 7
+weight: 8
 ---
 
 The **Contact** section provides a way to reach Viktor Brunclík directly.

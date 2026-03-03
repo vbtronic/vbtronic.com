@@ -11,6 +11,7 @@ The **News** section shows the 10 most recently published items from across the 
 
 The page displays the newest content from the following sections:
 
+- **Analysis & Blog** — In-depth articles and analyses.
 - **Posts** — Blog posts, opinions, and thoughts.
 - **Portfolio** — Projects, achievements, and certificates.
 

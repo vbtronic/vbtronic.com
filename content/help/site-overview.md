@@ -13,10 +13,11 @@ VB Tronic is a non-commercial personal website where Viktor presents his project
 
 ## How is the site organized?
 
-The site has eight main sections, all accessible from the navigation bar:
+The site has nine main sections, all accessible from the navigation bar:
 
 - **Home** — The landing page with a hero section, global search bar, recently added content, and links to all sections.
 - **News** — The 10 most recently published items from across the site.
+- **Analysis & Blog** — In-depth articles, analyses, and longer-form writing.
 - **About Viktor Brunclík** — A bio page with Viktor's background and timeline.
 - **Posts** — Blog posts, opinions, and thoughts by Viktor.
 - **Portfolio** — Projects, achievements, certificates, and creative work.

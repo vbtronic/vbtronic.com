@@ -2,7 +2,7 @@
 title: "Portfolio Section"
 description: "What the Portfolio section contains and how to browse it."
 date: 2026-02-24T12:00:00+01:00
-weight: 5
+weight: 6
 ---
 
 The **Portfolio** section showcases Viktor's projects, achievements, certificates, and creative work.

@@ -2,7 +2,7 @@
 title: "Legal & Privacy"
 description: "How legal notices and privacy work on this site."
 date: 2026-02-09T14:00:00+01:00
-weight: 10
+weight: 11
 ---
 
 This page explains the legal and privacy aspects of vbtronic.com.

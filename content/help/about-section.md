@@ -2,7 +2,7 @@
 title: "About Viktor Brunclík Section"
 description: "What you will find on the About page."
 date: 2026-02-09T12:00:00+01:00
-weight: 6
+weight: 7
 ---
 
 The **About Viktor Brunclík** section is a single page with Viktor's bio and timeline.
