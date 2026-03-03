@@ -1,0 +1,116 @@
+{{ define "main" }}
+<div class="page-nav-bar page-nav-bar--single">
+  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
+  <span class="nav-breadcrumb">{{ .Parent.Title }}</span>
+  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
+</div>
+
+<article class="post" id="article-top">
+  <header class="post-header">
+    <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="article-nav-bar">
+    <a href="#article-bottom" class="article-nav-link">Jump to bottom <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+    <div class="article-search">
+      <input type="text" class="article-search-input" id="article-search-top" placeholder="Search in article..." autocomplete="off">
+      <span class="article-search-count" id="search-count-top"></span>
+    </div>
+  </div>
+
+  <div class="post-content" id="post-content">
+    {{ .Content }}
+  </div>
+
+  <div class="article-nav-bar" id="article-bottom">
+    <a href="#article-top" class="article-nav-link">Back to top <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></a>
+  </div>
+</article>
+
+<script>
+(function() {
+  var input = document.getElementById('article-search-top');
+  var countEl = document.getElementById('search-count-top');
+  var content = document.getElementById('post-content');
+  if (!input || !content) return;
+
+  var originalHTML = null;
+
+  function escapeRegExp(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function clearHighlights() {
+    if (originalHTML !== null) {
+      content.innerHTML = originalHTML;
+      originalHTML = null;
+    }
+    countEl.textContent = '';
+  }
+
+  function highlightMatches(query) {
+    clearHighlights();
+    if (!query || query.length < 2) return;
+
+    originalHTML = content.innerHTML;
+    var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+    var textNodes = [];
+    while (walker.nextNode()) {
+      var node = walker.currentNode;
+      if (node.parentElement && !node.parentElement.closest('script, style, canvas')) {
+        textNodes.push(node);
+      }
+    }
+
+    var regex = new RegExp(escapeRegExp(query), 'gi');
+    var count = 0;
+
+    for (var i = textNodes.length - 1; i >= 0; i--) {
+      var node = textNodes[i];
+      var text = node.textContent;
+      if (!regex.test(text)) continue;
+      regex.lastIndex = 0;
+
+      var frag = document.createDocumentFragment();
+      var lastIdx = 0;
+      var match;
+
+      while ((match = regex.exec(text)) !== null) {
+        count++;
+        if (match.index > lastIdx) {
+          frag.appendChild(document.createTextNode(text.slice(lastIdx, match.index)));
+        }
+        var mark = document.createElement('mark');
+        mark.className = 'article-search-highlight';
+        mark.textContent = match[0];
+        frag.appendChild(mark);
+        lastIdx = regex.lastIndex;
+      }
+
+      if (lastIdx < text.length) {
+        frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+      }
+
+      node.parentNode.replaceChild(frag, node);
+    }
+
+    var label = count > 0 ? count + (count === 1 ? ' match' : ' matches') : 'No matches';
+    countEl.textContent = label;
+
+    if (count > 0) {
+      var first = content.querySelector('.article-search-highlight');
+      if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    var query = this.value.trim();
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() { highlightMatches(query); }, 250);
+  });
+})();
+</script>
+{{ end }}

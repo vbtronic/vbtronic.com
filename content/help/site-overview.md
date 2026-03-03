@@ -17,7 +17,7 @@ The site has nine main sections, all accessible from the navigation bar:
 
 - **Home** — The landing page with a hero section, global search bar, recently added content, and links to all sections.
 - **News** — The 10 most recently published items from across the site.
-- **Analyses & Blog** — In-depth articles, analyses, and longer-form writing.
+- **Analyses** — In-depth articles, analyses, and longer-form writing.
 - **About Viktor Brunclík** — A bio page with Viktor's background and timeline.
 - **Posts** — Blog posts, opinions, and thoughts by Viktor.
 - **Portfolio** — Projects, achievements, certificates, and creative work.

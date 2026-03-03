@@ -37,6 +37,19 @@ The numbers are striking:
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
+var _ct = (function() {
+  var d = document.documentElement.getAttribute('data-theme') === 'light';
+  return {
+    title: d ? '#1a1a2e' : '#e0e0e0',
+    tick: d ? '#6b6b7a' : '#aaa',
+    grid: d ? '#e0e0e4' : '#2a2a2a',
+    gridFaint: d ? '#f0f0f2' : '#1a1a1a',
+    legend: d ? '#4a4a5a' : '#ccc',
+    bg: d ? '#ffffff' : '#0a0a0a'
+  };
+})();
+</script>
+<script>
 (function() {
   const ctx = document.getElementById('hallucinationRates').getContext('2d');
   new Chart(ctx, {
@@ -77,7 +90,7 @@ The numbers are striking:
         title: {
           display: true,
           text: 'AI Hallucination Rates by Model & Benchmark Type (2025)',
-          color: '#e0e0e0',
+          color: _ct.title,
           font: { size: 14, family: 'Inter' }
         },
         tooltip: {
@@ -90,16 +103,16 @@ The numbers are striking:
         y: {
           beginAtZero: true,
           max: 40,
-          ticks: { color: '#aaa', callback: v => v + '%' },
-          grid: { color: '#2a2a2a' }
+          ticks: { color: _ct.tick, callback: v => v + '%' },
+          grid: { color: _ct.grid }
         },
         x: {
           ticks: {
-            color: '#aaa',
+            color: _ct.tick,
             maxRotation: 30,
             font: { size: 11 }
           },
-          grid: { color: '#1a1a1a' }
+          grid: { color: _ct.gridFaint }
         }
       }
     }
@@ -136,7 +149,7 @@ This isn't just a technical benchmark problem. The business and societal costs a
       datasets: [{
         data: [47, 39, 76, 91],
         backgroundColor: ['#e63946cc', '#ff6b6bcc', '#0077b6cc', '#00b4d8cc'],
-        borderColor: '#0a0a0a',
+        borderColor: _ct.bg,
         borderWidth: 3
       }]
     },
@@ -145,12 +158,12 @@ This isn't just a technical benchmark problem. The business and societal costs a
       plugins: {
         legend: {
           position: 'bottom',
-          labels: { color: '#ccc', font: { size: 11, family: 'Inter' }, padding: 12 }
+          labels: { color: _ct.legend, font: { size: 11, family: 'Inter' }, padding: 12 }
         },
         title: {
           display: true,
           text: 'Enterprise Impact of AI Hallucinations (2024–2025)',
-          color: '#e0e0e0',
+          color: _ct.title,
           font: { size: 14, family: 'Inter' }
         }
       }
@@ -161,7 +174,7 @@ This isn't just a technical benchmark problem. The business and societal costs a
 
 *Sources: Deloitte Enterprise AI Survey 2024; IBM AI Adoption Index 2025; Customer Experience Association 2024*
 
-The global financial toll from hallucinations reached an estimated **$67.4 billion** in 2024, with enterprises spending roughly $14,200 per employee annually on mitigation and fact-checking — averaging 4.3 hours per week of verification work per knowledge worker (Microsoft, 2025; Forrester Research, 2025).
+The business costs are harder to quantify but clearly substantial. Enterprises report significant spending on mitigation, fact-checking, and human review of AI outputs. According to industry surveys, knowledge workers spend multiple hours per week verifying AI-generated content — time that adds up to thousands of dollars per employee annually in lost productivity.
 
 ---
 
@@ -206,7 +219,7 @@ At a technical level, hallucinations emerge from how the transformer architectur
         backgroundColor: 'rgba(0, 180, 216, 0.15)',
         borderColor: '#00b4d8',
         pointBackgroundColor: '#00b4d8',
-        pointBorderColor: '#0a0a0a',
+        pointBorderColor: _ct.bg,
         pointHoverBackgroundColor: '#fff',
         borderWidth: 2
       }]
@@ -215,21 +228,21 @@ At a technical level, hallucinations emerge from how the transformer architectur
       responsive: true,
       plugins: {
         legend: {
-          labels: { color: '#ccc', font: { family: 'Inter' } }
+          labels: { color: _ct.legend, font: { family: 'Inter' } }
         },
         title: {
           display: true,
           text: 'Relative Contribution of Each Cause (Research Consensus)',
-          color: '#e0e0e0',
+          color: _ct.title,
           font: { size: 14, family: 'Inter' }
         }
       },
       scales: {
         r: {
           min: 0, max: 100,
-          ticks: { color: '#888', backdropColor: 'transparent', stepSize: 25 },
-          grid: { color: '#2a2a2a' },
-          pointLabels: { color: '#ccc', font: { size: 12, family: 'Inter' } }
+          ticks: { color: _ct.tick, backdropColor: 'transparent', stepSize: 25 },
+          grid: { color: _ct.grid },
+          pointLabels: { color: _ct.legend, font: { size: 12, family: 'Inter' } }
         }
       }
     }
@@ -241,7 +254,7 @@ At a technical level, hallucinations emerge from how the transformer architectur
 
 ### 4. Is It Mathematically Inevitable?
 
-Two independent research teams — a January 2024 arXiv paper and a 2025 paper by Banerjee et al. — argue the answer is **yes**. Using results from computational theory and Gödel's First Incompleteness Theorem, they show that every stage of the LLM pipeline has a non-zero probability of producing hallucinations. A fundamental mathematical trade-off exists between *consistency* (avoiding invalid outputs) and *breadth* (generating diverse, rich responses): any model that generalizes beyond its training data will either hallucinate or suffer mode collapse.
+Two independent research teams — a January 2024 arXiv paper by Xu et al. and a 2025 paper by Banerjee et al. — argue the answer is **yes**. Xu et al. use results from computational learning theory to show that LLMs cannot learn all computable functions and will inevitably hallucinate. Banerjee et al. draw on Gödel's First Incompleteness Theorem to argue the same conclusion from a different angle. Both show that every stage of the LLM pipeline has a non-zero probability of producing hallucinations. A fundamental mathematical trade-off exists between *consistency* (avoiding invalid outputs) and *breadth* (generating diverse, rich responses): any model that generalizes beyond its training data will either hallucinate or suffer mode collapse.
 
 ---
 
@@ -286,24 +299,24 @@ Despite the bad news, there has been dramatic improvement:
       responsive: true,
       plugins: {
         legend: {
-          labels: { color: '#ccc', font: { family: 'Inter' } }
+          labels: { color: _ct.legend, font: { family: 'Inter' } }
         },
         title: {
           display: true,
           text: 'Hallucination Rates Over Time (2021–2025)',
-          color: '#e0e0e0',
+          color: _ct.title,
           font: { size: 14, family: 'Inter' }
         }
       },
       scales: {
         y: {
           beginAtZero: true,
-          ticks: { color: '#aaa', callback: v => v + '%' },
-          grid: { color: '#2a2a2a' }
+          ticks: { color: _ct.tick, callback: v => v + '%' },
+          grid: { color: _ct.grid }
         },
         x: {
-          ticks: { color: '#aaa' },
-          grid: { color: '#1a1a1a' }
+          ticks: { color: _ct.tick },
+          grid: { color: _ct.gridFaint }
         }
       }
     }
@@ -328,7 +341,7 @@ Instead of relying purely on learned knowledge, the model retrieves real documen
 New training approaches penalize both over- and under-confidence, rewarding "I don't know" when evidence is thin. A 2025 NAACL study showed that training models to prefer faithful translations cut hallucination rates by **90–96%** without hurting output quality.
 
 **3. Prompt Engineering**
-Clear, constrained prompts significantly reduce hallucination rates. A 2025 study in *npj Digital Medicine* found that prompt-based mitigation reduced GPT-4o's hallucination rate from **53% to 23%** in clinical settings. Simply asking the model "Are you hallucinating?" was found to reduce subsequent errors by 17%, possibly by activating internal verification processes.
+Clear, constrained prompts significantly reduce hallucination rates. A 2025 study in *Communications Medicine* found that prompt-based mitigation reduced GPT-4o's hallucination rate from **53% to 23%** in clinical settings. Techniques like chain-of-thought prompting and explicit instructions to cite sources or say "I don't know" can meaningfully reduce confabulation.
 
 **4. Rethinking Evaluations**
 The OpenAI 2025 paper argues this is the most important fix: rewrite benchmarks to *reward* expressions of uncertainty. As long as leaderboards reward confident guessing, models will keep guessing.
@@ -342,7 +355,7 @@ Anthropic's 2025 work on Claude identified specific internal circuits responsibl
 
 Despite all the progress, a 2025 mathematical proof shows that hallucinations are **structurally inevitable** under existing LLM architectures. They cannot be fully eliminated by better data, better training, or better architecture alone — they are a fundamental consequence of probabilistic language modeling.
 
-What can be achieved is *dramatic reduction* and *better management*. The market for hallucination detection tools grew **318%** between 2023 and 2025, signaling that organizations are treating this as a persistent operational risk rather than a solvable bug.
+What can be achieved is *dramatic reduction* and *better management*. The market for hallucination detection and mitigation tools has grown rapidly, signaling that organizations are treating this as a persistent operational risk rather than a solvable bug.
 
 ---
 
@@ -358,25 +371,26 @@ The good news: rates are improving fast, mitigation tools are maturing, and inte
 
 <details>
 <summary><strong>Sources & References</strong></summary>
-
-| # | Source | Link | Date |
-|---|--------|-------|------|
-| 1 | Kalai, Nachum, Vempala, Zhang — *Why Language Models Hallucinate* (OpenAI / arXiv) | [arxiv.org/abs/2509.04664](https://arxiv.org/abs/2509.04664) | Sep 2025 |
-| 2 | Xu et al. — *Hallucination is Inevitable: An Innate Limitation of Large Language Models* (arXiv) | [arxiv.org/abs/2401.11817](https://arxiv.org/abs/2401.11817) | Jan 2024 / Feb 2025 |
-| 3 | Banerjee, Agarwal, Singla — *LLMs Will Always Hallucinate, and We Need to Live With This* (arXiv) | [arxiv.org/html/2409.05746v1](https://arxiv.org/html/2409.05746v1) | 2025 |
-| 4 | Huang et al. — *A Survey on Hallucination in Large Language Models* (ACM / arXiv) | [arxiv.org/abs/2311.05232](https://arxiv.org/abs/2311.05232) | Nov 2023 / Nov 2024 |
-| 5 | OpenAI — *Why Language Models Hallucinate* (blog) | [openai.com/index/why-language-models-hallucinate](https://openai.com/index/why-language-models-hallucinate) | 2025 |
-| 6 | Wikipedia — *Hallucination (artificial intelligence)* | [en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)](https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)) | Updated Mar 2026 |
-| 7 | Vectara — Hughes Hallucination Evaluation Model (HHEM) Leaderboard | [vectara.com](https://vectara.com) | Apr 2025 |
-| 8 | AllAboutAI — *AI Hallucination Statistics & Report 2025* | [allaboutai.com/resources/ai-statistics/ai-hallucinations](https://www.allaboutai.com/resources/ai-statistics/ai-hallucinations/) | Jul 2025 |
-| 9 | Lakera — *LLM Hallucinations in 2026* | [lakera.ai/blog/guide-to-hallucinations-in-large-language-models](https://www.lakera.ai/blog/guide-to-hallucinations-in-large-language-models) | 2026 |
-| 10 | ScottGraffius.com — *Are AI Hallucinations Getting Better or Worse?* | [scottgraffius.com/blog/files/ai-hallucinations-2026.html](https://www.scottgraffius.com/blog/files/ai-hallucinations-2026.html) | 2026 |
-| 11 | Balbix — *When "Good Enough" Hallucination Rates Aren't Good Enough* | [balbix.com/blog/hallucinations-agentic-hype](https://www.balbix.com/blog/hallucinations-agentic-hype/) | Oct 2025 |
-| 12 | PMC / npj Digital Medicine — *Multi-model assurance analysis: LLMs vulnerable to adversarial hallucination* | [pmc.ncbi.nlm.nih.gov/articles/PMC12318031](https://pmc.ncbi.nlm.nih.gov/articles/PMC12318031/) | 2025 |
-| 13 | Visual Capitalist — *Ranked: AI Hallucination Rates by Model* (Columbia Journalism Review data) | [visualcapitalist.com](https://www.visualcapitalist.com/sp/ter02-ranked-ai-hallucination-rates-by-model/) | Nov 2025 |
-| 14 | Microsoft Work Trend Index 2025 — *AI verification time data* | microsoft.com | 2025 |
-| 15 | Deloitte — *Enterprise AI Survey 2024* | deloitte.com | 2024 |
-| 16 | Forrester Research — *Hallucination mitigation cost per employee* | forrester.com | 2025 |
-| 17 | Anthropic — *Interpretability research on Claude's "knowing" circuits* | anthropic.com | 2025 |
-
+<table>
+  <thead>
+    <tr><th>#</th><th>Source</th><th>Link</th><th>Date</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>Kalai, Nachum, Vempala, Zhang — <em>Why Language Models Hallucinate</em> (OpenAI / arXiv)</td><td><a href="https://arxiv.org/abs/2509.04664">arxiv.org/abs/2509.04664</a></td><td>Sep 2025</td></tr>
+    <tr><td>2</td><td>Xu et al. — <em>Hallucination is Inevitable: An Innate Limitation of Large Language Models</em> (arXiv)</td><td><a href="https://arxiv.org/abs/2401.11817">arxiv.org/abs/2401.11817</a></td><td>Jan 2024 / Feb 2025</td></tr>
+    <tr><td>3</td><td>Banerjee, Agarwal, Singla — <em>LLMs Will Always Hallucinate, and We Need to Live With This</em> (arXiv)</td><td><a href="https://arxiv.org/html/2409.05746v1">arxiv.org/html/2409.05746v1</a></td><td>2025</td></tr>
+    <tr><td>4</td><td>Huang et al. — <em>A Survey on Hallucination in Large Language Models</em> (ACM / arXiv)</td><td><a href="https://arxiv.org/abs/2311.05232">arxiv.org/abs/2311.05232</a></td><td>Nov 2023 / Nov 2024</td></tr>
+    <tr><td>5</td><td>OpenAI — <em>Why Language Models Hallucinate</em> (blog)</td><td><a href="https://openai.com/index/why-language-models-hallucinate">openai.com</a></td><td>2025</td></tr>
+    <tr><td>6</td><td>Wikipedia — <em>Hallucination (artificial intelligence)</em></td><td><a href="https://en.wikipedia.org/wiki/Hallucination_(artificial_intelligence)">en.wikipedia.org</a></td><td>Updated Mar 2026</td></tr>
+    <tr><td>7</td><td>Vectara — Hughes Hallucination Evaluation Model (HHEM) Leaderboard</td><td><a href="https://vectara.com">vectara.com</a></td><td>Apr 2025</td></tr>
+    <tr><td>8</td><td>AllAboutAI — <em>AI Hallucination Statistics & Report 2025</em></td><td><a href="https://www.allaboutai.com/resources/ai-statistics/ai-hallucinations/">allaboutai.com</a></td><td>Jul 2025</td></tr>
+    <tr><td>9</td><td>Lakera — <em>LLM Hallucinations in 2026</em></td><td><a href="https://www.lakera.ai/blog/guide-to-hallucinations-in-large-language-models">lakera.ai</a></td><td>2026</td></tr>
+    <tr><td>10</td><td>ScottGraffius.com — <em>Are AI Hallucinations Getting Better or Worse?</em></td><td><a href="https://www.scottgraffius.com/blog/files/ai-hallucinations-2026.html">scottgraffius.com</a></td><td>2026</td></tr>
+    <tr><td>11</td><td>Communications Medicine — <em>Multi-model assurance analysis showing LLMs are vulnerable to adversarial hallucination attacks during clinical decision support</em></td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12318031/">pmc.ncbi.nlm.nih.gov</a></td><td>2025</td></tr>
+    <tr><td>12</td><td>Visual Capitalist — <em>Ranked: AI Hallucination Rates by Model</em> (Columbia Journalism Review data)</td><td><a href="https://www.visualcapitalist.com/sp/ter02-ranked-ai-hallucination-rates-by-model/">visualcapitalist.com</a></td><td>Nov 2025</td></tr>
+    <tr><td>13</td><td>Deloitte — <em>Enterprise AI Survey 2024</em></td><td>deloitte.com</td><td>2024</td></tr>
+    <tr><td>14</td><td>IBM — <em>AI Adoption Index 2025</em></td><td>ibm.com</td><td>2025</td></tr>
+    <tr><td>15</td><td>Anthropic — <em>Interpretability research on Claude's internal representations</em></td><td>anthropic.com</td><td>2025</td></tr>
+  </tbody>
+</table>
 </details>

@@ -9,6 +9,7 @@
 
 {{ $allContent := where .Site.RegularPages "Section" "ne" "help" }}
 {{ $allContent = where $allContent "Section" "ne" "privacy" }}
+{{ $allContent = where $allContent "Section" "ne" "analysis" }}
 {{ $sorted := sort $allContent "Date" "desc" }}
 {{ if $sorted }}
 {{ $featured := index $sorted 0 }}
@@ -52,6 +53,7 @@
 
 {{ $searchable := where .Site.RegularPages "Section" "ne" "help" }}
 {{ $searchable = where $searchable "Section" "ne" "privacy" }}
+{{ $searchable = where $searchable "Section" "ne" "analysis" }}
 <section class="posts-list" id="search-results" style="display:none;">
   {{ range (sort $searchable "Date" "desc") }}
   <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
@@ -77,7 +79,7 @@
   <div class="about-links">
     <a href="/about/" class="about-link">About Viktor Brunclík</a>
     <a href="/news/" class="about-link">News</a>
-    <a href="/analysis/" class="about-link">Analyses & Blog</a>
+    <a href="/analysis/" class="about-link">Analyses</a>
     <a href="/portfolio/" class="about-link">Portfolio</a>
     <a href="/posts/" class="about-link">Posts</a>
     <a href="/contact/" class="about-link">Contact</a>

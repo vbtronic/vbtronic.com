@@ -9,7 +9,7 @@ There are several ways to move around vbtronic.com.
 
 ## Navigation bar
 
-The sticky header at the top of every page contains the site logo (**vbtronic.com**) and a hamburger menu that opens to show links to all main sections: **Home**, **News**, **Analyses & Blog**, **About Viktor Brunclík**, **Posts**, **Portfolio**, **Contact**, **Help**, and **Privacy Policy**. The currently active section is highlighted with a vertical bar.
+The sticky header at the top of every page contains the site logo (**vbtronic.com**) and a hamburger menu that opens to show links to all main sections: **Home**, **News**, **Analyses**, **About Viktor Brunclík**, **Posts**, **Portfolio**, **Contact**, **Help**, and **Privacy Policy**. The currently active section is highlighted with a vertical bar.
 
 The header stays visible as you scroll, so you can always switch sections quickly.
 
