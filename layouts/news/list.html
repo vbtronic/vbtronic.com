@@ -10,7 +10,6 @@
 
 {{ $allPages := where .Site.RegularPages "Section" "ne" "help" }}
 {{ $allPages = where $allPages "Section" "ne" "privacy" }}
-{{ $allPages = where $allPages "Section" "ne" "analysis" }}
 {{ $newest := first 10 (sort $allPages "Date" "desc") }}
 
 {{ if $newest }}
