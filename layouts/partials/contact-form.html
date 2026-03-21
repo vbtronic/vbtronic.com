@@ -1,0 +1,40 @@
+{{- $endpoint := getenv "CONTACT_FORM_ENDPOINT" -}}
+{{- $id := .id | default "contact-form" -}}
+{{- $title := .title | default "Contact Form" -}}
+{{- $description := .description | default "Send me your message directly from the website." -}}
+{{- $button := .button | default "Send Message" -}}
+{{- $source := .source | default "unknown" -}}
+
+<section class="about-card contact-form-card" id="{{ $id }}">
+  <h2 class="about-heading">
+    <svg class="section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    {{ $title }}
+  </h2>
+  <div class="about-body">
+    <p>{{ $description }}</p>
+  </div>
+
+  {{ if $endpoint }}
+  <form class="contact-form" method="POST" action="{{ $endpoint }}">
+    <input type="hidden" name="source" value="{{ $source }}">
+    <input type="hidden" name="_subject" value="New contact form message from vbtronic.com">
+
+    <label for="{{ $id }}-name">Name</label>
+    <input id="{{ $id }}-name" type="text" name="name" autocomplete="name" required>
+
+    <label for="{{ $id }}-email">Email</label>
+    <input id="{{ $id }}-email" type="email" name="email" autocomplete="email" required>
+
+    <label for="{{ $id }}-message">Message</label>
+    <textarea id="{{ $id }}-message" name="message" rows="6" required></textarea>
+
+    <label class="contact-form-honeypot" for="{{ $id }}-company">Company</label>
+    <input class="contact-form-honeypot" id="{{ $id }}-company" type="text" name="company" tabindex="-1" autocomplete="off">
+
+    <button type="submit">{{ $button }}</button>
+  </form>
+  <p class="contact-form-note">Messages are processed by Formspree and delivered to <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a>.</p>
+  {{ else }}
+  <p class="contact-form-note">The contact form is being configured. Please use <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a> for now.</p>
+  {{ end }}
+</section>

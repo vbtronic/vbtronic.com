@@ -39,6 +39,7 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
+          CONTACT_FORM_ENDPOINT: ${{ secrets.CONTACT_FORM_ENDPOINT }}
           TZ: Europe/Prague
         run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact

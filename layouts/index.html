@@ -88,6 +88,14 @@
   </div>
 </section>
 
+{{ partial "contact-form.html" (dict
+  "id" "ideas-form-home"
+  "title" "Ideas Form"
+  "description" "Have an idea for my first commercial project? Send it here."
+  "button" "Send Idea"
+  "source" "home-ideas"
+) }}
+
 <script>
 (function() {
   var input = document.getElementById('search-input');

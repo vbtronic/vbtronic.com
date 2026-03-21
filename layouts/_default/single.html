@@ -15,4 +15,14 @@
     {{ .Content }}
   </div>
 </article>
+
+{{ if .Params.show_idea_form }}
+{{ partial "contact-form.html" (dict
+  "id" "ideas-form-post"
+  "title" "Send Your Idea"
+  "description" "Your feedback helps shape the project."
+  "button" "Send Idea"
+  "source" "post-ideas"
+) }}
+{{ end }}
 {{ end }}

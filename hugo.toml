@@ -4,6 +4,7 @@ title = 'Viktor Brunclík'
 enableRobotsTXT = true
 enableEmoji = false
 disableKinds = ['RSS']
+taxonomies = {}
 
 [params]
   description = "Viktor Brunclík — vbtronic.com"
@@ -15,6 +16,10 @@ disableKinds = ['RSS']
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+[security]
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$', '^CONTACT_FORM_ENDPOINT$']
 
 [menu]
   [[menu.main]]

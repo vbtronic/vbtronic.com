@@ -2,6 +2,8 @@
 
 Personal website of Viktor Brunclík. Built with [Hugo](https://gohugo.io/).
 
+Live site: [https://www.vbtronic.com](https://www.vbtronic.com)
+
 ## Prerequisites
 
 - [Hugo](https://gohugo.io/installation/) (extended edition, v0.145.0+)
@@ -58,6 +60,17 @@ This site is deployed automatically to GitHub Pages via GitHub Actions.
 > **Important:** Pages must be enabled (steps 1–2) *before* the first push, otherwise the workflow will fail with a `configure-pages` error.
 
 The workflow is defined in `.github/workflows/deploy.yml`.
+
+### Contact Form (Formspree)
+
+The site uses Formspree for contact forms (no custom backend/database in this repo).
+
+1. Create a form at Formspree and set the destination email to `vb@vbtronic.com`.
+2. Copy your Formspree endpoint URL (example: `https://formspree.io/f/xxxxxx`).
+3. In GitHub repo settings, go to **Settings → Secrets and variables → Actions**.
+4. Add a repository secret named `CONTACT_FORM_ENDPOINT` with your Formspree endpoint URL.
+
+The GitHub Actions deploy workflow injects this secret into Hugo build as an environment variable.
 
 ### Custom Domain
 

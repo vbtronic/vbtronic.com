@@ -20,6 +20,14 @@
   </div>
 </section>
 
+{{ partial "contact-form.html" (dict
+  "id" "contact-form"
+  "title" "Contact Form"
+  "description" "Send a message straight from this page. I read every email."
+  "button" "Send Email"
+  "source" "contact-page"
+) }}
+
 {{ with .Content }}
 <article class="post">
   <div class="post-content">
