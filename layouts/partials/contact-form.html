@@ -1,4 +1,4 @@
-{{- $endpoint := getenv "CONTACT_FORM_ENDPOINT" -}}
+{{- $endpoint := .endpoint | default "https://formsubmit.co/vb@vbtronic.com" -}}
 {{- $id := .id | default "contact-form" -}}
 {{- $title := .title | default "Contact Form" -}}
 {{- $description := .description | default "Send me your message directly from the website." -}}
@@ -14,10 +14,12 @@
     <p>{{ $description }}</p>
   </div>
 
-  {{ if $endpoint }}
   <form class="contact-form" method="POST" action="{{ $endpoint }}">
     <input type="hidden" name="source" value="{{ $source }}">
     <input type="hidden" name="_subject" value="New contact form message from vbtronic.com">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="{{ "contact/?sent=1" | absURL }}">
 
     <label for="{{ $id }}-name">Name</label>
     <input id="{{ $id }}-name" type="text" name="name" autocomplete="name" required>
@@ -33,8 +35,5 @@
 
     <button type="submit">{{ $button }}</button>
   </form>
-  <p class="contact-form-note">Messages are processed by Formspree and delivered to <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a>.</p>
-  {{ else }}
-  <p class="contact-form-note">The contact form is being configured. Please use <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a> for now.</p>
-  {{ end }}
+  <p class="contact-form-note">Messages are processed by FormSubmit and delivered to <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a>.</p>
 </section>

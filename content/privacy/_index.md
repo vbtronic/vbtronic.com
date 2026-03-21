@@ -18,15 +18,15 @@ This is a non-commercial personal website. It does not collect personal data, us
 
 If you email vb@vbtronic.com, your email address and message content will be processed for the purpose of responding to your inquiry. This data is not shared with third parties.
 
-### Contact Form (Formspree)
+### Contact Form (FormSubmit)
 
-The contact forms on this website are powered by [Formspree](https://formspree.io/).
+The contact forms on this website are powered by [FormSubmit](https://formsubmit.co/).
 
-When you submit a form, Formspree processes and stores your submitted data (name, email, message, and technical request metadata) in order to deliver it to our email inbox.
+When you submit a form, FormSubmit processes and stores your submitted data (name, email, message, and technical request metadata) in order to deliver it to our email inbox.
 
-Formspree acts as a separate service provider and has its own privacy policy:
+FormSubmit acts as a separate service provider and has its own privacy policy:
 
-- [Formspree Privacy Policy](https://formspree.io/legal/privacy-policy/)
+- [FormSubmit Privacy Policy](https://formsubmit.co/privacy.pdf)
 
 ### GitHub Pages Hosting
 
