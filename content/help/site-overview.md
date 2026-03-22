@@ -21,7 +21,7 @@ The site has nine main sections, all accessible from the navigation bar:
 - **About Viktor Brunclík** — A bio page with Viktor's background and timeline.
 - **Posts** — Blog posts, opinions, and thoughts by Viktor.
 - **Portfolio** — Projects, achievements, certificates, and creative work.
-- **Contact** — Email contact information.
+- **Contact** — Email contact information and a contact form.
 - **Help** — The section you are reading now. A guide to using this website.
 - **Privacy Policy** — How this site handles your data.
 

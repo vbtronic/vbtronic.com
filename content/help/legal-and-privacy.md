@@ -12,7 +12,7 @@ This page explains the legal and privacy aspects of vbtronic.com.
 The site has a [Privacy Policy](/privacy/) page accessible from the footer of every page. It explains:
 
 - The site does not collect any personal data
-- How email contact data is handled
+- How contact form and email data are handled
 - What localStorage and sessionStorage are used for
 - How GitHub Pages hosting may log IP addresses
 
