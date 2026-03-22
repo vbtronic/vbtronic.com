@@ -19,7 +19,7 @@
     <input type="hidden" name="_subject" value="New contact form message from vbtronic.com">
     <input type="hidden" name="_captcha" value="false">
     <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="{{ "contact/?sent=1" | absURL }}">
+    <input type="hidden" name="_next" value="{{ "contact/#sent" | absURL }}">
 
     <label for="{{ $id }}-name">Name</label>
     <input id="{{ $id }}-name" type="text" name="name" autocomplete="name" required>
