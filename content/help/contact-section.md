@@ -5,22 +5,11 @@ date: 2026-02-24T12:00:00+01:00
 weight: 8
 ---
 
-The **Contact** section provides a way to reach Viktor Brunclík directly.
-
-It includes both:
-
-- A direct email link (`vb@vbtronic.com`)
-- A contact form powered by FormSubmit
-
-## Contact Form
-
-The contact form sends your message through FormSubmit to Viktor's inbox.
-
-On your first submission, FormSubmit may ask for activation by email. After activation, future messages are delivered normally.
+The **Contact** section provides a direct way to reach Viktor Brunclík.
 
 ## Email
 
-The page displays an email address you can click to open your email client.
+The page displays an email address you can click to open your email client: `vb@vbtronic.com`.
 
 ### Email link not working?
 
@@ -52,8 +41,9 @@ You can contact Viktor for:
 
 - Feedback about the website
 - Questions or suggestions
+- Website work or improvements
 - General inquiries
 
 ## Privacy
 
-When you send a message (by form or email), your contact data and message content are processed for the purpose of responding to your inquiry. See the [Privacy Policy](/privacy/) for more details.
+When you send an email, your contact data and message content are processed for the purpose of responding to your inquiry. See the [Privacy Policy](/privacy/) for more details.

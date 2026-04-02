@@ -1,8 +1,6 @@
-{{- $endpoint := .endpoint | default "https://formsubmit.co/vb@vbtronic.com" -}}
 {{- $id := .id | default "contact-form" -}}
-{{- $title := .title | default "Contact Form" -}}
-{{- $description := .description | default "Send me your message directly from the website." -}}
-{{- $button := .button | default "Send Message" -}}
+{{- $title := .title | default "Contact" -}}
+{{- $description := .description | default "Get in touch via email." -}}
 {{- $source := .source | default "unknown" -}}
 
 <section class="about-card contact-form-card" id="{{ $id }}">
@@ -12,28 +10,12 @@
   </h2>
   <div class="about-body">
     <p>{{ $description }}</p>
+  {{- if .customDescription -}}
+  <p style="font-style: italic; color: #666; margin-top: 0.5em;">{{ .customDescription }}</p>
+  {{- end -}}
   </div>
-
-  <form class="contact-form" method="POST" action="{{ $endpoint }}">
-    <input type="hidden" name="source" value="{{ $source }}">
-    <input type="hidden" name="_subject" value="New contact form message from vbtronic.com">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="{{ "contact/#sent" | absURL }}">
-
-    <label for="{{ $id }}-name">Name</label>
-    <input id="{{ $id }}-name" type="text" name="name" autocomplete="name" required>
-
-    <label for="{{ $id }}-email">Email</label>
-    <input id="{{ $id }}-email" type="email" name="email" autocomplete="email" required>
-
-    <label for="{{ $id }}-message">Message</label>
-    <textarea id="{{ $id }}-message" name="message" rows="6" required></textarea>
-
-    <label class="contact-form-honeypot" for="{{ $id }}-company">Company</label>
-    <input class="contact-form-honeypot" id="{{ $id }}-company" type="text" name="company" tabindex="-1" autocomplete="off">
-
-    <button type="submit">{{ $button }}</button>
-  </form>
-  <p class="contact-form-note">Messages are processed by FormSubmit and delivered to <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a>.</p>
+  <p class="contact-form-note">
+    Contact me directly using your email client:
+    <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a>
+  </p>
 </section>

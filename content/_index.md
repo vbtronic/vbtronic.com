@@ -7,6 +7,10 @@ I'm Viktor Brunclík — an 11-year-old from Prague, Czech Republic, and a futur
 
 This website is my personal space where I share my portfolio, achievements, and thoughts. As I grow, I'll also be showcasing my products and ventures here.
 
+**Links:**
+
+- **[News](/news/)** — latest updates and news
+
 Welcome to my journey.
 
 This website and its articles are created by **Viktor Brunclík** with the help of AI tools **Amp** and **Claude Code**.

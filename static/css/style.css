@@ -260,17 +260,21 @@ strong {
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   padding: 0.5rem 0;
-  max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.3s ease, opacity 0.2s ease, background-color 0.3s ease;
+  transform: translateY(-0.5rem);
+  visibility: hidden;
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0s linear 0.15s, background-color 0.2s ease;
   pointer-events: none;
+  will-change: opacity, transform;
 }
 
 /* Open state */
 .site-nav.nav-open {
-  max-height: 600px;
   opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  transition-delay: 0s;
   pointer-events: auto;
 }
 
@@ -381,7 +385,7 @@ strong {
   height: 2px;
   background-color: var(--color-text-primary);
   border-radius: 1px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .nav-toggle-bar + .nav-toggle-bar {

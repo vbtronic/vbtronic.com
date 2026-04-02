@@ -27,30 +27,34 @@ taxonomies = {}
     url = '/news/'
     weight = 2
   [[menu.main]]
+    name = 'Products & Websites'
+    url = '/products/'
+    weight = 3
+  [[menu.main]]
     name = 'Analyses'
     url = '/analysis/'
-    weight = 3
+    weight = 4
   [[menu.main]]
     name = 'About Viktor Brunclík'
     url = '/about/'
-    weight = 4
+    weight = 5
   [[menu.main]]
     name = 'Posts'
     url = '/posts/'
-    weight = 5
+    weight = 6
   [[menu.main]]
     name = 'Portfolio'
     url = '/portfolio/'
-    weight = 6
+    weight = 7
   [[menu.main]]
     name = 'Contact'
     url = '/contact/'
-    weight = 7
+    weight = 8
   [[menu.main]]
     name = 'Help'
     url = '/help/'
-    weight = 8
+    weight = 9
   [[menu.main]]
     name = 'Privacy Policy'
     url = '/privacy/'
-    weight = 9
+    weight = 10

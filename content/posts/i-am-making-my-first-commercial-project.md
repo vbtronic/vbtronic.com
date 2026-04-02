@@ -9,4 +9,4 @@ I just started building my first commercial project.
 
 I want it to solve a real problem, and I want to build it the right way from the beginning.
 
-If you have an idea, feature request, or any feedback, please send it through the ideas form below.
+If you have an idea, feature request, or any feedback, please send it using the contact section below.

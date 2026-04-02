@@ -13,17 +13,17 @@ This website is my personal space where I share my work, opinions, and achieveme
 
 - [GitHub](https://github.com/vbtronic)
 
-## Produkty a weby
+## Products & Websites
 
-Tady nabízím svoje služby a ukázky projektu. Pomáhám vytvářet weby na míru a udržuji několik svých webů.
+I build custom websites and maintain a few personal web projects.
 
-Zahlížíte se na můj work in progress? Projděte si:
+Here are a few current projects:
 
-- [sideplan.cz](https://sideplan.cz)
-- [vbtronic.github.io/funny_music](https://vbtronic.github.io/funny_music)
-- [vbtronic.github.io/playground](https://vbtronic.github.io/playground)
+- [StranaPlan.cz](https://stranaplan.cz)
+- [Funny Music](https://vbtronic.github.io/funny_music/)
+- [Playground](https://vbtronic.github.io/playground/)
 
-Chystáš si web? Potřebuješ něco vylepšit? Napiš mi [[kontakt](/contact/)](/contact/) nebo použi [[formular](#produkty-a-weby-contact-form)](/produkt/).
+Need a website built or an existing one improved? Visit the [Contact](/contact/) page.
 
 ## Timeline
 
