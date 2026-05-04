@@ -4,6 +4,9 @@ date: 2026-03-03T15:58:24Z
 description: "A deep-dive into the causes, mechanics, and real-world impact of AI hallucinations — and what the latest research says about fixing them."
 status: "Analysis"
 tag: "AI"
+long_read: true
+aliases:
+  - /analysis/why-does-ai-hallucinate/
 ---
 
 <div class="analysis-meta">
@@ -69,16 +72,16 @@ var _ct = (function() {
         label: 'Hallucination Rate (%)',
         data: [0.7, 0.8, 1.5, 4.4, 15.8, 16.0, 33.0, 29.9],
         backgroundColor: [
-          '#00b4d8cc',
-          '#00b4d8cc',
-          '#00b4d8cc',
-          '#0077b6cc',
+          '#22c55ecc',
+          '#22c55ecc',
+          '#22c55ecc',
+          '#16a34acc',
           '#ff6b6bcc',
           '#ff6b6bcc',
           '#e63946cc',
           '#e63946cc'
         ],
-        borderColor: '#00b4d8',
+        borderColor: '#22c55e',
         borderWidth: 1,
         borderRadius: 4
       }]
@@ -148,7 +151,7 @@ This isn't just a technical benchmark problem. The business and societal costs a
       ],
       datasets: [{
         data: [47, 39, 76, 91],
-        backgroundColor: ['#e63946cc', '#ff6b6bcc', '#0077b6cc', '#00b4d8cc'],
+        backgroundColor: ['#e63946cc', '#ff6b6bcc', '#16a34acc', '#22c55ecc'],
         borderColor: _ct.bg,
         borderWidth: 3
       }]
@@ -216,9 +219,9 @@ At a technical level, hallucinations emerge from how the transformer architectur
       datasets: [{
         label: 'Research Consensus — Contribution to Hallucination',
         data: [70, 90, 65, 60, 55, 75],
-        backgroundColor: 'rgba(0, 180, 216, 0.15)',
-        borderColor: '#00b4d8',
-        pointBackgroundColor: '#00b4d8',
+        backgroundColor: 'rgba(34, 197, 94, 0.15)',
+        borderColor: '#22c55e',
+        pointBackgroundColor: '#22c55e',
         pointBorderColor: _ct.bg,
         pointHoverBackgroundColor: '#fff',
         borderWidth: 2
@@ -277,9 +280,9 @@ Despite the bad news, there has been dramatic improvement:
         {
           label: 'Best Model Hallucination Rate (summarization benchmark)',
           data: [21.8, 14.0, 6.5, 3.0, 0.7],
-          borderColor: '#00b4d8',
-          backgroundColor: 'rgba(0, 180, 216, 0.1)',
-          pointBackgroundColor: '#00b4d8',
+          borderColor: '#22c55e',
+          backgroundColor: 'rgba(34, 197, 94, 0.1)',
+          pointBackgroundColor: '#22c55e',
           tension: 0.4,
           fill: true
         },

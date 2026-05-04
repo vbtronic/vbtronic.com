@@ -6,17 +6,29 @@
   </div>
 </div>
 
-{{ if .Pages }}
+{{ $blog := where .Site.RegularPages "Section" "eq" "blog" }}
+{{ $blog = where $blog "Params.draft" "ne" true }}
+{{ $sorted := sort $blog "Date" "desc" }}
 
-{{ $latest := first 3 .Pages.ByDate.Reverse }}
-{{ if $latest }}
+{{ if $sorted }}
+
+{{ $featured := index $sorted 0 }}
+<article class="featured-card">
+  <a href="{{ $featured.Permalink }}">
+    <time class="post-date" datetime="{{ $featured.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $featured.Date.Format "Jan 2, 2006 15:04" }} CET</time>
+    <h2 class="featured-title">{{ $featured.Title }}</h2>
+    <div class="featured-excerpt">{{ $featured.Summary }}</div>
+  </a>
+</article>
+
+{{ $latest := first 3 $sorted }}
 <section class="latest-posts">
   <h2 class="latest-posts-heading">Recently Added</h2>
   <div class="latest-posts-grid">
     {{ range $latest }}
     <article class="latest-post-card">
       <a href="{{ .Permalink }}">
-        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         <h3>{{ .Title }}</h3>
         {{ with .Description }}<p>{{ . }}</p>{{ end }}
       </a>
@@ -24,11 +36,10 @@
     {{ end }}
   </div>
 </section>
-{{ end }}
 
 <section class="all-posts-box">
   <div class="all-posts-header">
-    <h2 class="all-posts-heading">All Posts</h2>
+    <h2 class="all-posts-heading">All Articles</h2>
     <div class="filter-bar">
       <button class="filter-btn active" data-sort="date">Date & Time</button>
       <button class="filter-btn" data-sort="alpha">A–Z</button>
@@ -37,14 +48,17 @@
   </div>
 
   <div class="search-box">
-    <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+    <div class="search-box-inner">
+      <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Search..." autocomplete="off">
+    </div>
   </div>
 
   <div class="posts-list" id="posts-list">
-    {{ range .Pages.ByDate.Reverse }}
+    {{ range $sorted }}
     <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}" data-date="{{ .Date.Format "2006-01-02T15:04:05" }}" data-wordcount="{{ .WordCount }}">
       <a href="{{ .Permalink }}">
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
+        <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         <h2 class="post-title">{{ .Title }}</h2>
         {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
       </a>
@@ -110,10 +124,8 @@
 </script>
 
 {{ else }}
-
 <section class="all-posts-box">
-  <p class="no-results">No posts published yet. Check back soon!</p>
+  <p class="no-results">No articles published yet. Check back soon!</p>
 </section>
-
 {{ end }}
 {{ end }}

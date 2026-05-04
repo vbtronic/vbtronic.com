@@ -1,25 +1,27 @@
 ---
 title: "Products & Websites"
-description: "Custom web services and personal web projects."
+description: "Software products and web projects by Viktor Brunclík and Bruncsoft."
 aliases:
   - /produkty/
 ---
 
-I build custom websites and maintain a few personal web projects.
+[Bruncsoft](https://bruncsoft.com) is a software company founded by Viktor Brunclík. Below are the current products and projects.
 
-## Services
+## Bruncsoft Products
 
-- **Custom website creation** — pages designed around your needs
-- **Domain setup** — help with getting your own web address
-- **Hosting setup** — putting your website online
-- **Website improvements** — updates, redesigns, and new features for an existing site
+- [chcek.bruncsoft.com](https://chcek.bruncsoft.com) — spell checker
+- [frontend.bruncsoft.com](https://frontend.bruncsoft.com) — frontend development resources and tools
+- [3dshop.bruncsoft.com](https://3dshop.bruncsoft.com) — order custom 3D prints
+- [batteries.bruncsoft.com](https://batteries.bruncsoft.com) — batteries app
 
-## Featured Websites
+## Other Projects
 
-- [StranaPlan.cz](https://stranaplan.cz) — custom posters, slogans, mottos, and other tailored visuals
+- [games.vbtronic.com](https://games.vbtronic.com) — browser games
+- [StranaPlan.cz](https://stranaplan.cz) — custom posters, slogans, and tailored visuals
 - [Funny Music](https://vbtronic.github.io/funny_music/) — a collection of favorite and funny songs
-- [Playground](https://vbtronic.github.io/playground/) — a place to practice HTML, CSS, and JavaScript
+- [Programming Learning App](https://vbtronic.github.io/programming-learnin-app) — learn programming interactively
+- [GitHub](https://github.com/vbtronic) — open-source projects
 
 ## Work With Me
 
-If you want a website or improvements to an existing one, visit the [Contact](/contact/) page and send me an email.
+Interested in building a website or collaborating? Visit the [Contact](/contact/) page.

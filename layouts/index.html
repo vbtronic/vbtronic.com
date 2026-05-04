@@ -1,136 +1,112 @@
 {{ define "main" }}
-<div class="page-nav-bar">
-  <button class="nav-arrow" id="nav-back" onclick="siteNavBack()" title="Back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg></button>
-  <div class="page-nav-title">
-    <h1>Home</h1>
-  </div>
-  <button class="nav-arrow" id="nav-fwd" onclick="siteNavForward()" title="Forward"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></button>
-</div>
-
-{{ $allContent := where .Site.RegularPages "Section" "ne" "help" }}
-{{ $allContent = where $allContent "Section" "ne" "privacy" }}
-{{ $allContent = where $allContent "Section" "ne" "analysis" }}
-{{ $sorted := sort $allContent "Date" "desc" }}
-{{ if $sorted }}
-{{ $featured := index $sorted 0 }}
-<article class="featured-card">
-  <a href="{{ $featured.Permalink }}">
-    <time class="post-date" datetime="{{ $featured.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $featured.Date.Format "Jan 2, 2006 15:04" }} CET</time>
-    <h2 class="featured-title">{{ $featured.Title }}</h2>
-    <div class="featured-excerpt">{{ $featured.Summary }}</div>
-  </a>
-</article>
-{{ end }}
 
 <section class="hero">
   <div class="hero-content">
     <div class="hero-badge">
-      <svg class="hero-badge-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
-      <span>Engineering & Innovation</span>
+      <span>Engineering &amp; Innovation</span>
     </div>
     <h1 class="hero-title">VB Tronic</h1>
     <p class="hero-subtitle">{{ .Site.Params.description }}</p>
     <div class="hero-line"></div>
     <div class="hero-actions">
-      <a href="/about/" class="hero-btn hero-btn--primary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        About Viktor Brunclík
-      </a>
-      <a href="https://github.com/vbtronic" target="_blank" rel="noopener" class="hero-btn hero-btn--secondary">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-10-3.5"/><path d="M10 8c6.5 3 5 12.5 0 13"/><path d="M21 12c-5-2.5-5-5.5-10-6.5"/><circle cx="5" cy="18" r="2"/></svg>
-        GitHub
-      </a>
+      <a href="/about/" class="hero-btn hero-btn--primary">About Viktor Brunclík</a>
+      <a href="/blog/" class="hero-btn hero-btn--secondary">Blog</a>
+      <a href="https://github.com/vbtronic" target="_blank" rel="noopener" class="hero-btn hero-btn--secondary">GitHub</a>
+      <a href="https://bruncsoft.com" target="_blank" rel="noopener" class="hero-btn hero-btn--secondary">bruncsoft.com</a>
     </div>
   </div>
 </section>
 
-<div class="search-box">
-  <div class="search-box-inner">
-    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="search-input" placeholder="Search articles..." autocomplete="off">
-  </div>
-</div>
+<section class="career-section">
+  <h2 class="career-section-heading">Career</h2>
+  <div class="career-scroll-container">
+    <div class="career-scroll" id="career-scroll">
 
-{{ $searchable := where .Site.RegularPages "Section" "ne" "help" }}
-{{ $searchable = where $searchable "Section" "ne" "privacy" }}
-{{ $searchable = where $searchable "Section" "ne" "analysis" }}
-<section class="posts-list" id="search-results" style="display:none;">
-  {{ range (sort $searchable "Date" "desc") }}
-  <article class="post-card" data-title="{{ .Title | lower }}" data-description="{{ with .Description }}{{ . | lower }}{{ end }}">
-    <a href="{{ .Permalink }}">
-      <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006 15:04" }} CET</time>
-      <h2 class="post-title">{{ .Title }}</h2>
-      {{ with .Description }}<p class="post-excerpt">{{ . }}</p>{{ end }}
-    </a>
-  </article>
-  {{ end }}
+      <details class="career-card">
+        <summary>
+          <span class="career-period">2026 – Present</span>
+          <span class="career-name">Bruncsoft</span>
+          <span class="career-role">Founder &amp; CEO</span>
+        </summary>
+        <div class="career-detail">
+          <p>Founded Bruncsoft — a software company building tools, apps, and websites. Products include chcek.bruncsoft.com, frontend.bruncsoft.com, batteries.bruncsoft.com, and 3dshop.bruncsoft.com.</p>
+          <p><a href="https://bruncsoft.com" target="_blank" rel="noopener noreferrer">bruncsoft.com</a></p>
+        </div>
+      </details>
+
+      <div class="career-card career-card--future" aria-hidden="true">
+        <div class="career-card-placeholder">
+          <span class="career-period">Coming soon</span>
+          <span class="career-name">More</span>
+          <span class="career-role">…</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script>
+  (function() {
+    var track = document.getElementById('career-scroll');
+    if (!track) return;
+    var SHIFT = 256;
+    function cycle() {
+      // slide left — card exits to the left
+      track.style.transition = 'transform 0.75s ease-in-out';
+      track.style.transform = 'translateX(-' + SHIFT + 'px)';
+      setTimeout(function() {
+        // instant jump to the right — invisible, no transition
+        track.style.transition = 'none';
+        track.style.transform = 'translateX(' + SHIFT + 'px)';
+        // two rAFs ensure the browser paints the jump before re-enabling transition
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            // slide back to center — card enters from the right
+            track.style.transition = 'transform 0.75s ease-in-out';
+            track.style.transform = 'translateX(0)';
+            setTimeout(cycle, 3800);
+          });
+        });
+      }, 1100);
+    }
+    setTimeout(cycle, 1000);
+  })();
+  </script>
 </section>
 
-<p class="no-results" id="no-results" style="display:none;">No results found.</p>
+
+<section class="work-card">
+  <div class="work-card-body">
+    <div class="work-card-text">
+      <h2 class="work-card-heading">What I Do</h2>
+      <p>Custom software — from idea to working app or website. Focused on smaller projects where every detail matters.</p>
+      <a href="/contact/" class="work-card-cta">Get in touch</a>
+    </div>
+    <div class="work-card-motto">
+      <span class="work-motto-tag">#becareful</span>
+    </div>
+  </div>
+</section>
 
 <section class="about-card" id="about-web">
-  <h2 class="about-heading">
-    <svg class="section-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-    About This Web
-  </h2>
+  <h2 class="about-heading">About This Web</h2>
   <div class="about-body">
-    <p>Welcome to <strong>VB Tronic</strong> — a personal website created by Viktor Brunclík. Explore articles, opinions, portfolio, and more.</p>
+    <p>Welcome to <strong>VB Tronic</strong> — a personal website created by Viktor Brunclík. Explore articles, portfolio, and more.</p>
   </div>
   <div class="about-links">
-    <a href="/about/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About Viktor Brunclík</a>
-    <a href="/news/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 9l2 5l4-14l-2 5l4 14z"/><line x1="21" y1="16" x2="7.01" y2="16"/></svg> News</a>
-    <a href="/products/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2c4.97 0 9 4.03 9 9s-4.03 9-9 9a9.96 9.96 0 0 1-9-9c0-4.97 4.03-9 9-9z"/><path d="M3 12h18"/><path d="M12 3v18"/></svg> Products & Websites</a>
-    <a href="/analysis/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg> Analyses</a>
-    <a href="/portfolio/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7.2 14.9 8.26 15.99"/><path d="M12 15.9v-4.2"/></svg> Portfolio</a>
-    <a href="/posts/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="21"/><line x1="16" y1="17" x2="8" y2="25"/><polyline points="10 15 10 21 6 21"/></svg> Posts</a>
-    <a href="/contact/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> Contact</a>
-    <a href="/help/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12" y2="17"/></svg> Help</a>
-    <a href="/privacy/" class="about-link"><svg class="section-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Privacy Policy</a>
+    <a href="/about/" class="about-link">About Viktor Brunclík</a>
+    <a href="/blog/" class="about-link">Blog</a>
+    <a href="/products/" class="about-link">Products &amp; Websites</a>
+    <a href="/portfolio/" class="about-link">Portfolio</a>
+    <a href="/contact/" class="about-link">Contact</a>
+    <a href="https://bruncsoft.com" target="_blank" rel="noopener" class="about-link">bruncsoft.com</a>
   </div>
 </section>
 
 {{ partial "contact-form.html" (dict
-  "id" "ideas-form-home"
-  "title" "Ideas Form"
-  "description" "Have an idea for my first commercial project? Send it here."
-  "button" "Send Idea"
-  "source" "home-ideas"
+  "id" "home-contact"
+  "title" "Get in Touch"
+  "description" "Questions, ideas, or just want to say hello?"
+  "source" "home"
 ) }}
 
-<script>
-(function() {
-  var input = document.getElementById('search-input');
-  var results = document.getElementById('search-results');
-  var noResults = document.getElementById('no-results');
-  if (!input || !results) return;
-
-  input.addEventListener('input', function() {
-    var query = this.value.toLowerCase().trim();
-    var cards = results.querySelectorAll('.post-card');
-
-    if (!query) {
-      results.style.display = 'none';
-      noResults.style.display = 'none';
-      cards.forEach(function(card) { card.style.display = ''; });
-      return;
-    }
-
-    results.style.display = '';
-    var visible = 0;
-
-    cards.forEach(function(card) {
-      var title = card.getAttribute('data-title') || '';
-      var desc = card.getAttribute('data-description') || '';
-      if (title.indexOf(query) !== -1 || desc.indexOf(query) !== -1) {
-        card.style.display = '';
-        visible++;
-      } else {
-        card.style.display = 'none';
-      }
-    });
-
-    noResults.style.display = visible === 0 ? '' : 'none';
-  });
-})();
-</script>
 {{ end }}

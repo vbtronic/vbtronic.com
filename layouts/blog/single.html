@@ -1,0 +1,130 @@
+{{ define "main" }}
+<div class="page-nav-bar page-nav-bar--single">
+  <span class="nav-breadcrumb"><a href="/blog/">Blog</a></span>
+</div>
+
+<article class="post" id="article-top">
+  <header class="post-header">
+    <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="post-description">{{ . }}</p>{{ end }}
+  </header>
+
+  <div class="article-nav-bar">
+    <div class="article-search">
+      <input type="text" class="article-search-input" id="article-search" placeholder="Search in article..." autocomplete="off">
+      <span class="article-search-count" id="search-count"></span>
+    </div>
+    <div class="article-search-arrows">
+      <button class="article-search-nav" id="search-prev" title="Previous match" disabled>↑</button>
+      <button class="article-search-nav" id="search-next" title="Next match" disabled>↓</button>
+    </div>
+    <a href="#article-bottom" class="article-nav-link">Jump to bottom <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></a>
+  </div>
+
+  <div class="post-content" id="post-content">
+    {{ .Content }}
+  </div>
+
+  <div class="article-nav-bar" id="article-bottom">
+    <a href="#article-top" class="article-nav-link">Back to top <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></a>
+  </div>
+</article>
+
+<script>
+(function() {
+  var input = document.getElementById('article-search');
+  var countEl = document.getElementById('search-count');
+  var prevBtn = document.getElementById('search-prev');
+  var nextBtn = document.getElementById('search-next');
+  var content = document.getElementById('post-content');
+  if (!input || !content) return;
+
+  var originalHTML = null;
+  var currentIndex = -1;
+  var matchCount = 0;
+
+  function escapeRegExp(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+  function updateButtons() {
+    prevBtn.disabled = matchCount === 0;
+    nextBtn.disabled = matchCount === 0;
+  }
+
+  function updateActive() {
+    var marks = content.querySelectorAll('.article-search-highlight');
+    marks.forEach(function(m, i) {
+      m.classList.toggle('article-search-highlight--active', i === currentIndex);
+    });
+    if (marks[currentIndex]) {
+      marks[currentIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    if (matchCount > 0) countEl.textContent = (currentIndex + 1) + ' / ' + matchCount;
+  }
+
+  function clearHighlights() {
+    if (originalHTML !== null) { content.innerHTML = originalHTML; originalHTML = null; }
+    countEl.textContent = '';
+    currentIndex = -1;
+    matchCount = 0;
+    updateButtons();
+  }
+
+  function highlightMatches(query) {
+    clearHighlights();
+    if (!query || query.length < 2) return;
+    originalHTML = content.innerHTML;
+    var walker = document.createTreeWalker(content, NodeFilter.SHOW_TEXT, null, false);
+    var textNodes = [];
+    while (walker.nextNode()) {
+      var node = walker.currentNode;
+      if (node.parentElement && !node.parentElement.closest('script, style, canvas')) textNodes.push(node);
+    }
+    var regex = new RegExp(escapeRegExp(query), 'gi');
+    var count = 0;
+    for (var i = textNodes.length - 1; i >= 0; i--) {
+      var node = textNodes[i];
+      var text = node.textContent;
+      if (!regex.test(text)) continue;
+      regex.lastIndex = 0;
+      var frag = document.createDocumentFragment();
+      var lastIdx = 0;
+      var match;
+      while ((match = regex.exec(text)) !== null) {
+        if (match.index > lastIdx) frag.appendChild(document.createTextNode(text.slice(lastIdx, match.index)));
+        var mark = document.createElement('mark');
+        mark.className = 'article-search-highlight';
+        mark.textContent = match[0];
+        frag.appendChild(mark);
+        count++;
+        lastIdx = regex.lastIndex;
+      }
+      if (lastIdx < text.length) frag.appendChild(document.createTextNode(text.slice(lastIdx)));
+      node.parentNode.replaceChild(frag, node);
+    }
+    matchCount = count;
+    updateButtons();
+    if (count > 0) { currentIndex = 0; updateActive(); }
+    else countEl.textContent = 'No matches';
+  }
+
+  var debounceTimer;
+  input.addEventListener('input', function() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function() { highlightMatches(input.value.trim()); }, 250);
+  });
+
+  nextBtn.addEventListener('click', function() {
+    if (matchCount === 0) return;
+    currentIndex = (currentIndex + 1) % matchCount;
+    updateActive();
+  });
+
+  prevBtn.addEventListener('click', function() {
+    if (matchCount === 0) return;
+    currentIndex = (currentIndex - 1 + matchCount) % matchCount;
+    updateActive();
+  });
+})();
+</script>
+{{ end }}
