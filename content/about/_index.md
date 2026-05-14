@@ -5,7 +5,7 @@ description: "Bio, achievements, and timeline."
 
 ## Bio
 
-I'm Viktor Brunclík — an 11-year-old from Prague, Czech Republic. I love technology, programming, reading, and learning new things every day. I'm also interested in law and politics.
+I'm Viktor Brunclík — from Prague, Czech Republic. I love technology, programming, reading, and learning new things every day. I'm also interested in law and politics.
 
 I'm the founder of [Bruncsoft](https://bruncsoft.com) — a software company building tools and applications.
 
