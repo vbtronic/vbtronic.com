@@ -19,7 +19,7 @@ aliases:
 - [games.vbtronic.com](https://games.vbtronic.com) — browser games
 - [StranaPlan.cz](https://stranaplan.cz) — custom posters, slogans, and tailored visuals
 - [Funny Music](https://vbtronic.github.io/funny_music/) — a collection of favorite and funny songs
-- [Programming Learning App](https://vbtronic.github.io/programming-learnin-app) — learn programming interactively
+- [Programming Learning App](https://vbtronic.github.io/programming-learning-app) — learn programming interactively
 - [GitHub](https://github.com/vbtronic) — open-source projects
 
 ## Work With Me
