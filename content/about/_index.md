@@ -1,35 +1,36 @@
 ---
 title: "About Viktor Brunclík"
-description: "Bio, achievements, and timeline."
+description: "Who I am, what I build, and how I got here."
 ---
 
 ## Bio
 
 I'm Viktor Brunclík — from Prague, Czech Republic. I love technology, programming, reading, and learning new things every day. I'm also interested in law and politics.
 
-I'm the founder of [Bruncsoft](https://bruncsoft.com) — a software company building tools and applications.
+I started programming in 2025, mostly by building things and finding out what breaks. Since then I have shipped websites, browser games and small tools, and I write about what I work out along the way.
 
-This website is my personal space where I share my work, opinions, and achievements. It is built with Hugo and deployed on GitHub Pages.
+I'm also the founder and lead builder of [Bruncsoft](https://bruncsoft.com) — a small student studio that builds websites, applications, e-shops, automation and AI tools for other people. Bruncsoft is a brand, not a company, and it is deliberately small: you talk to the person who writes the code.
+
+This website is where I keep all of it. I built it myself with Hugo and hand-written CSS, no framework and no page builder, and it deploys on every push.
+
+## What I Build
+
+- [Browser games](https://vbtronic.github.io/vbgames/) — small games that run in a tab
+- [This website](https://github.com/vbtronic/vbtronic.com) — the code behind vbtronic.com
+- [Bruncsoft](https://bruncsoft.com) — the studio, and the work I take on through it
+- [Everything else](/products/) — the full list, including what came down again
 
 ## Links
 
 - [GitHub](https://github.com/vbtronic)
+- [X — @ViktorBrunclik](https://x.com/ViktorBrunclik)
 - [Blog](/blog/)
-- [Bruncsoft](https://bruncsoft.com)
-
-## Products & Websites
-
-I build custom websites and maintain a few personal web projects. Here are some current projects:
-
-- [StranaPlan.cz](https://stranaplan.cz)
-- [Bruncsoft](https://bruncsoft.com)
-- [games.vbtronic.com](https://games.vbtronic.com)
-- [Funny Music](https://vbtronic.github.io/funny_music/)
 
 Need a website built or an existing one improved? Visit the [Contact](/contact/) page.
 
 ## Timeline
 
+- **2026** — Retired the Bruncsoft products and turned the studio to work done for customers: websites, applications, automation, AI tools, and source research
 - **2026** — Founded Bruncsoft; launched bruncsoft.com and subproducts
 - **2026** — Built vbtronic.com using Hugo, Amp, and Claude Code
 - **2025** — Passed the Cambridge English A1 (Starters) exam

@@ -9,9 +9,11 @@ There are several ways to move around vbtronic.com.
 
 ## Navigation bar
 
-The sticky header at the top of every page contains the site logo (**vbtronic.com**) and a hamburger menu that opens to show links to all main sections: **Home**, **News**, **Products & Websites**, **Analyses**, **About Viktor Brunclík**, **Posts**, **Portfolio**, **Contact**, **Help**, and **Privacy Policy**. The currently active section is highlighted with a vertical bar.
+The header at the top of every page contains the site logo (**vbtronic.com**), a theme toggle, and a hamburger button. The hamburger opens a full-screen menu with the main sections: **Home**, **Blog**, **Projects**, **Portfolio**, **About Viktor Brunclík**, and **Contact**. The section you are on is shown in blue.
 
-The header stays visible as you scroll, so you can always switch sections quickly.
+The header stays visible as you scroll, so you can always switch sections quickly. Press **Escape**, click outside the menu, or pick a section to close it again.
+
+**Help** and the **Privacy Policy** are not in the menu — Privacy is linked from the footer of every page, and Help from the links you followed to get here.
 
 ## Back and forward arrows
 
@@ -19,8 +21,8 @@ Every page has **left arrow** and **right arrow** buttons in the page header. Th
 
 ## Theme toggle
 
-The header also includes a theme toggle button (sun/moon icon) that switches between dark and light mode. Your preference is saved in your browser.
+The header also includes a theme toggle button (sun/moon icon) that switches between light and dark mode. The site opens in light mode unless your system asks for dark, and your choice is saved in your browser.
 
 ## Links on the Home page
 
-On the home page, the "About This Web" card provides links to all main sections of the site.
+On the home page, the "About this site" card provides links to all main sections of the site.

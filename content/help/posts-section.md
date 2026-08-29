@@ -1,27 +1,30 @@
 ---
-title: "Posts Section"
-description: "What the Posts section contains and how to navigate it."
+title: "Blog Section"
+description: "What the Blog section contains and how to navigate it."
 date: 2026-02-24T12:00:00+01:00
-weight: 5
+weight: 3
 ---
 
-The **Posts** section is where Viktor shares blog posts, opinions, and thoughts on various topics.
-
-## What is in this section?
-
-Posts are typically opinion pieces, analyses, and thoughts on topics that interest Viktor. The section is currently empty and will be filled with content over time.
+The **Blog** is where Viktor shares posts, analyses, and longer-form writing — from short updates about what he has built to deep dives like *Why Does AI Hallucinate?*
 
 ## Page layout
 
-When posts are available, you will see:
-
-1. **Recently Added** — A grid of the 3 most recent posts.
-2. **All Posts** — A full list with search and sorting options.
+1. **Featured** — The newest post, in a highlighted card at the top.
+2. **Recently Added** — A grid of the 3 most recent posts.
+3. **All Articles** — The full list, with search and sorting.
 
 ## Search and sorting
 
-The post list has a search bar that filters posts in real time. You can also sort using filter buttons:
+The article list has a search bar that filters posts in real time as you type. You can also sort using the filter buttons:
 
-- **Date & Time** — Sort by newest first (default).
-- **A-Z** — Sort alphabetically by title.
-- **Size** — Sort by word count (longest first).
+- **Date & Time** — Newest first (default).
+- **A–Z** — Alphabetically by title.
+- **Size** — By word count, longest first.
+
+## Inside an article
+
+Longer articles have their own search bar, up/down arrows to step between matches, and a **Jump to bottom** link. Analyses also carry a badge saying they are an analysis, and one saying where AI was used.
+
+## Older posts
+
+Some posts are older than the things they describe. Where that matters, an **update note** sits at the top of the post and the original text is left underneath, unchanged.

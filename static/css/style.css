@@ -709,6 +709,68 @@ body.nav-locked {
   line-height: 1.7;
 }
 
+/* --- Card grid (shared shape with bruncsoft.com's .why-grid) --- */
+/* 380px min so four cards land as a tidy 2x2 on desktop, not 3 + 1 orphan. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-card {
+  background: var(--color-surface-1);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.grid-card:hover {
+  border-color: var(--color-accent-border-faint);
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.grid-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.grid-card p {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.grid-card p:last-child {
+  margin-bottom: 0;
+}
+
+.grid-card-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-accent-surface-2);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.home-section {
+  margin: 3.5rem 0;
+}
+
 /* --- Page Nav Bar ---
    Back arrow | title | forward arrow, on the pages that carry them. */
 .page-nav-bar {

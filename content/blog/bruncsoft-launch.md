@@ -1,8 +1,10 @@
 ---
 title: "I Founded Bruncsoft"
-description: "Bruncsoft is a software company I started — building tools, apps, and websites."
+description: "Why I started Bruncsoft — building tools, apps, and websites. Written in April 2026; see the update at the top."
 date: 2026-04-20T12:00:00+02:00
 ---
+
+> **Update, August 2026:** Bruncsoft is a brand, not a company — a small student studio. It no longer runs products of its own; it builds websites, applications, automation and AI tools for other people. The post below is left as it was written.
 
 I founded [Bruncsoft](https://bruncsoft.com) — a software company focused on building useful tools and applications.
 
@@ -20,4 +22,4 @@ I want to build real products, not just personal projects. Having a company give
 
 ## What's Next
 
-We've already launched several products. Check the [Products & Websites](/products/) page for the full list.
+We've already launched several products. Check the [Projects](/products/) page for the full list.

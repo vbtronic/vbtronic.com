@@ -7,7 +7,7 @@ disableKinds = ['RSS']
 taxonomies = {}
 
 [params]
-  description = "Viktor Brunclík — vbtronic.com"
+  description = "I build websites, browser games and tools, write about what I learn, and run Bruncsoft — a small student studio."
   author = "Viktor Brunclík"
 
 [markup]
@@ -27,7 +27,7 @@ taxonomies = {}
     url = '/blog/'
     weight = 2
   [[menu.main]]
-    name = 'Products & Websites'
+    name = 'Projects'
     url = '/products/'
     weight = 3
   [[menu.main]]

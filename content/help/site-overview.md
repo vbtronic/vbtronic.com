@@ -13,27 +13,28 @@ VB Tronic is a non-commercial personal website where Viktor presents his project
 
 ## How is the site organized?
 
-The site has ten main sections, all accessible from the navigation bar:
+Six sections are in the menu:
 
-- **Home** — The landing page with a hero section, global search bar, recently added content, and links to all sections.
-- **News** — The 10 most recently published items from across the site.
-- **Products & Websites** — Viktor's web services and featured personal web projects.
-- **Analyses** — In-depth articles, analyses, and longer-form writing.
-- **About Viktor Brunclík** — A bio page with Viktor's background and timeline.
-- **Posts** — Blog posts, opinions, and thoughts by Viktor.
-- **Portfolio** — Projects, achievements, certificates, and creative work.
-- **Contact** — Email contact information for direct contact.
+- **Home** — The landing page: who Viktor is, what he builds, and links to everything else.
+- **Blog** — Posts, analyses, and longer-form writing.
+- **Projects** — What Viktor has built himself, and the work he takes on through Bruncsoft.
+- **Portfolio** — Achievements, certificates, and creative work.
+- **About Viktor Brunclík** — A bio page with his background and timeline.
+- **Contact** — Email, a message form, and a calendar for booking a meeting.
+
+Two more are reachable from links rather than the menu:
+
 - **Help** — The section you are reading now. A guide to using this website.
-- **Privacy Policy** — How this site handles your data.
+- **Privacy Policy** — How this site handles your data. Linked from the footer of every page.
 
 ## Footer
 
 Every page includes a footer with:
 
 - **Copyright notice** — All rights reserved.
+- **Links** — X, GitHub, Bruncsoft, and the Privacy Policy.
 - **AI disclosure** — States that this website and its articles are created with the help of AI tools.
-- **Privacy Policy** — A link to the site's privacy policy page.
 
 ## How was it built?
 
-The site is built with [Hugo](https://gohugo.io/) (a static site generator) and hosted on GitHub Pages. Viktor built it together with his dad using the AI tools **Amp** and **Claude Code**. The design features a dark/light theme toggle with a cyan accent color.
+The site is built with [Hugo](https://gohugo.io/) (a static site generator) and hosted on GitHub Pages. Viktor built it together with his dad using the AI tools **Amp** and **Claude Code**. It shares its design with [bruncsoft.com](https://bruncsoft.com): light by default, a blue accent, and a dark mode you can switch to from the header.

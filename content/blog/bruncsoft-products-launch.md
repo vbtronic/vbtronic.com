@@ -1,8 +1,10 @@
 ---
 title: "Bruncsoft Products Are Live"
-description: "We launched chcek.bruncsoft.com, frontend.bruncsoft.com, 3dshop.bruncsoft.com, and batteries.bruncsoft.com."
+description: "The first Bruncsoft products went live in April 2026. They have since been retired — see the update at the top."
 date: 2026-04-28T10:00:00+02:00
 ---
+
+> **Update, August 2026:** these products came down during 2026. Most were half-built, or competing with companies that will always outbuild us, so keeping them up was not honest. Nothing was deleted and nobody lost anything — there were no accounts and no paid plans. Bruncsoft no longer runs products of its own; see [Projects](/products/) for what it builds now. The post below is left as it was written.
 
 After launching [bruncsoft.com](https://bruncsoft.com), we've now shipped several products under the Bruncsoft brand.
 
