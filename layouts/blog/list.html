@@ -17,7 +17,9 @@
   <a href="{{ $featured.Permalink }}">
     <time class="post-date" datetime="{{ $featured.Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ $featured.Date.Format "Jan 2, 2006 15:04" }} CET</time>
     <h2 class="featured-title">{{ $featured.Title }}</h2>
-    <div class="featured-excerpt">{{ $featured.Summary }}</div>
+    {{/* Plain text on purpose: .Summary carries the post's own markup, and a link
+         inside it would close this card's <a> early and break the layout. */}}
+    <p class="featured-excerpt">{{ with $featured.Description }}{{ . }}{{ else }}{{ $featured.Summary | plainify | truncate 260 }}{{ end }}</p>
   </a>
 </article>
 

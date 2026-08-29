@@ -44,13 +44,19 @@ hugo new posts/my-post-title.md
 
 ## Design System
 
-- Background: `#0a0a0a`
-- Accent: `#00b4d8` (electric cyan)
-- Text: `#e0e0e0` (body), `#f5f5f5` (headings)
-- Font body: Inter
-- Font mono: JetBrains Mono
-- Container max-width: 800px
-- Dark/light theme with toggle
+Shared with bruncsoft.com — keep the two sites in step.
+
+- **Light is the default.** Dark only when the visitor picks it or their system asks for it
+- Background: `#ffffff` light / `#141414` dark; card and footer surface `#f5f5f7` / `#1e1e1e`
+- Accent: `#0071e3` light / `#2997ff` dark (Apple blue)
+- Text: `#1d1d1f` / `#f5f5f7` (primary), `#6e6e73` / `#a1a1a6` (secondary)
+- Font body: Inter. Font mono: JetBrains Mono, for dates and code only
+- Radii: `--radius` 20px (cards), `--radius-sm` 14px (inputs, small cards), `--radius-xs` 8px, `--radius-pill` for buttons
+- Container max-width: 1080px (`.container--narrow` is 700px for prose)
+- Nav: 56px translucent bar, hamburger opens a full-screen menu overlay at every width
+- Every colour goes through a `--color-*` custom property; the short `--bg` / `--accent` /
+  `--radius` aliases in `:root` are the bruncsoft token names, so markup copied from
+  bruncsoft.com works without edits
 
 ## Deployment
 
