@@ -7,7 +7,7 @@ disableKinds = ['RSS']
 taxonomies = {}
 
 [params]
-  description = "I build websites, browser games and tools, write about what I learn, and run Bruncsoft — a small student studio."
+  description = "I build websites, applications, AI tools and automation, write about what I learn, and run Bruncsoft — a small student studio."
   author = "Viktor Brunclík"
 
 [markup]

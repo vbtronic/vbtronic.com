@@ -32,9 +32,9 @@ Two more are reachable from links rather than the menu:
 Every page includes a footer with:
 
 - **Copyright notice** — All rights reserved.
-- **Links** — X, GitHub, Bruncsoft, and the Privacy Policy.
 - **AI disclosure** — States that this website and its articles are created with the help of AI tools.
+- **Privacy Policy card** — A link to how this site handles your data, on every page except the policy itself.
 
 ## How was it built?
 
-The site is built with [Hugo](https://gohugo.io/) (a static site generator) and hosted on GitHub Pages. Viktor built it together with his dad using the AI tools **Amp** and **Claude Code**. It shares its design with [bruncsoft.com](https://bruncsoft.com): light by default, a blue accent, and a dark mode you can switch to from the header.
+The site is built with [Hugo](https://gohugo.io/) (a static site generator) and hosted on GitHub Pages. Viktor built it together with his dad using the AI tools **Amp** and **Claude Code**. The design is green on white by default, with a dark mode you can switch to from the header.

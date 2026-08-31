@@ -9,7 +9,7 @@ There are several ways to move around vbtronic.com.
 
 ## Navigation bar
 
-The header at the top of every page contains the site logo (**vbtronic.com**), a theme toggle, and a hamburger button. The hamburger opens a full-screen menu with the main sections: **Home**, **Blog**, **Projects**, **Portfolio**, **About Viktor Brunclík**, and **Contact**. The section you are on is shown in blue.
+The header at the top of every page contains the site logo (**vbtronic.com**), a theme toggle, and a hamburger button. The hamburger opens a menu panel with the main sections: **Home**, **Blog**, **Projects**, **Portfolio**, **About Viktor Brunclík**, and **Contact**. The section you are on is shown in green.
 
 The header stays visible as you scroll, so you can always switch sections quickly. Press **Escape**, click outside the menu, or pick a section to close it again.
 

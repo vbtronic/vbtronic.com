@@ -23,4 +23,4 @@ Next to the section heading, there are filter buttons:
 - **A-Z** — Sorts items alphabetically by title.
 - **Size** — Sorts items by word count, longest first.
 
-The currently active sort is the filled blue button. Sorting happens instantly without reloading the page.
+The currently active sort is the filled green button. Sorting happens instantly without reloading the page.

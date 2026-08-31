@@ -6,8 +6,8 @@
   <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <script>
-  // Apply the theme before first paint to prevent a flash. Light is the default,
-  // as on bruncsoft.com; a saved choice or an explicit dark system preference wins.
+  // Apply the theme before first paint to prevent a flash. Green on white is the
+  // default; a saved choice or an explicit dark system preference wins.
   (function() {
     var saved = null;
     try { saved = localStorage.getItem('vbTheme'); } catch(e) {}
@@ -35,17 +35,13 @@
           <span class="nav-toggle-bar"></span>
         </button>
       </div>
+      <nav class="site-nav" id="site-nav">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>
+        {{ end }}
+      </nav>
     </div>
   </header>
-
-  {{/* Outside the header on purpose: the header's backdrop-filter makes it the
-       containing block for fixed children, which would trap this overlay in the
-       56px-tall bar instead of letting it cover the viewport. */}}
-  <nav class="site-nav" id="site-nav">
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}" class="nav-link{{ if $.IsMenuCurrent "main" . }} active{{ end }}">{{ .Name }}</a>
-    {{ end }}
-  </nav>
 
   <main class="site-main">
     <div class="container">
@@ -55,16 +51,19 @@
 
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-bottom">
-        <span class="footer-copy">&copy; {{ now.Year }} Viktor Brunclík. All rights reserved.</span>
-        <div class="footer-links">
-          <a href="https://x.com/ViktorBrunclik" target="_blank" rel="noopener">&#120143; @ViktorBrunclik</a>
-          <a href="https://github.com/vbtronic" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://bruncsoft.com" target="_blank" rel="noopener">Bruncsoft</a>
-          <a href="/privacy/">Privacy Policy</a>
-        </div>
-      </div>
+      <p>&copy; {{ now.Year }} Viktor Brunclík. All rights reserved.</p>
       <p class="ai-disclosure">This website and its articles are created by Viktor Brunclík with the help of AI tools Amp and Claude Code.</p>
+      {{ if ne .RelPermalink "/privacy/" }}
+      <section class="footer-legal">
+        <a href="/privacy/" class="footer-legal-card">
+          <div class="footer-legal-card-content">
+            <h3 class="footer-legal-heading">Privacy Policy</h3>
+            <p class="footer-legal-desc">How this site handles your data.</p>
+          </div>
+          <span class="footer-legal-arrow"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></span>
+        </a>
+      </section>
+      {{ end }}
     </div>
   </footer>
 
@@ -79,20 +78,12 @@
       nav.classList.remove('nav-open');
       toggle.classList.remove('nav-toggle-active');
       toggle.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('nav-locked');
     }
 
     toggle.addEventListener('click', function() {
       var isOpen = nav.classList.toggle('nav-open');
       toggle.classList.toggle('nav-toggle-active', isOpen);
       toggle.setAttribute('aria-expanded', String(isOpen));
-      // The menu is full-screen, so the page behind it must not scroll.
-      document.body.classList.toggle('nav-locked', isOpen);
-    });
-
-    // Clicking the empty space of the overlay closes it too.
-    nav.addEventListener('click', function(event) {
-      if (event.target === nav) closeNav();
     });
 
     nav.querySelectorAll('.nav-link').forEach(function(link) {
@@ -134,9 +125,11 @@
     });
 
     if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', function(e) {
+      // Mirrors the pre-paint script: only an explicit dark preference overrides
+      // the light default, so "no-preference" systems stay green on white.
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
         if (!getTheme()) {
-          setTheme(e.matches ? 'light' : 'dark');
+          setTheme(e.matches ? 'dark' : 'light');
         }
       });
     }
