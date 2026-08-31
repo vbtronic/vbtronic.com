@@ -11,11 +11,11 @@ I started programming in 2025, mostly by building things and finding out what br
 
 I'm also the founder and lead builder of [Bruncsoft](https://bruncsoft.com) — a small student studio that builds websites, front ends and back ends, applications, e-shops, AI tools and automation for other people. Bruncsoft is a brand, not a company, and it is deliberately small — one person, so far. You talk to the person who writes the code.
 
-This website is where I keep all of it. I built it myself with Hugo and hand-written CSS, no framework and no page builder, and it deploys on every push.
+This website is where I keep all of it. I built it with Hugo and AI — no framework, no template and no page builder — and it deploys on every push. I build with AI every day and do not pretend otherwise; what I bring is deciding what gets built, checking it, and being the one who fixes it later.
 
 ## What I Build
 
-- **Websites** — front end and back end, from scratch, no page builders
+- **Websites** — front end and back end, built with AI, from scratch rather than from a template
 - **Applications** — internal systems, customer portals, e-shops
 - **AI tools** — put where they earn their place, and not where they don't
 - **Automation** — the repetitive work that eats hours every week

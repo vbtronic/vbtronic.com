@@ -27,5 +27,6 @@ to look like someone worth ringing, and to be reachable — so there is no conta
 just his phone number and email where a visitor is most likely to want them. That keeps the
 site static, and a static site is fast, cheap to host and has nothing on it that can break.
 
-Everything is hand-written, no template and no page builder, and it reads properly on a
-phone — which is where most people looking for an electrician actually are.
+It was built with AI, from scratch rather than from a template — no page builder and no
+platform underneath, so it can still be changed a year from now. And it reads properly on a
+phone, which is where most people looking for an electrician actually are.

@@ -9,7 +9,7 @@ Everything here I built myself, or shipped through [Bruncsoft](https://bruncsoft
 
 ## My Own Projects
 
-- [This website](https://github.com/vbtronic/vbtronic.com) — Hugo, hand-written CSS, no framework and no page builder. Every push deploys it.
+- [This website](https://github.com/vbtronic/vbtronic.com) — Hugo, its own CSS, no framework and no page builder. Built with AI, like everything else here. Every push deploys it.
 - [GitHub](https://github.com/vbtronic) — the rest of what I am working on, including the half-finished things.
 
 ## Writing
@@ -20,7 +20,7 @@ I write about what I am working through — what I built, why it was built that 
 
 Through [Bruncsoft](https://bruncsoft.com) — a small student studio, and **a brand rather than a company**. One person, so far. It no longer runs products of its own; it builds things for other people and finishes them.
 
-- **Websites** — from one page to a hundred. A static site is €80 and a dynamic one €200. That is the whole site, not a price per page, agreed before any work starts. Prices exclude VAT.
+- **Websites** — from one page to a hundred. A static site starts at €120 and a dynamic one at €280. That is a guide price for the whole site, not a price per page, and it is agreed before any work starts. Both include Decap CMS, so you edit your own text and pictures without paying me to do it.
 - **Front end and back end** — the part people touch, and the database, API, logins and three-in-the-morning jobs underneath it.
 - **Applications and e-shops** — something that does a job rather than describes one: a tool a team uses daily, an internal system, a customer portal, a shop that fits what you sell.
 - **AI tools** — built around your work, not bolted on, including [LiteLLM](https://bruncsoft.com/services/litellm) deployed, hosted and maintained. I will also tell you where AI does not pay off — sometimes a rule beats a model.
@@ -28,10 +28,13 @@ Through [Bruncsoft](https://bruncsoft.com) — a small student studio, and **a b
 - **Source research and checking** — for education platforms and companies that need to know where a claim came from: finding the sources, indexing them, and checking each one, including whether it is legally usable.
 - **Deepfake defence** — fake video calls, cloned voices, invented candidates. Fixing the process that grants trust, not just spotting the fake.
 - **Hosting and maintenance** — offered on everything, billed monthly, cancel any time. A site nobody maintains is broken within a year.
+- **Print** — a business card is €16, or €24 with a QR code. You get print-ready files you own; the printing itself you arrange yourself.
 
-Everything beyond the two website prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. Full list and prices are on [bruncsoft.com](https://bruncsoft.com).
+Everything beyond those listed prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. **Bruncsoft is not VAT registered, so the number you see is the number you pay.** Full list and prices are on [bruncsoft.com](https://bruncsoft.com).
 
 The studio runs what it builds, builds from scratch rather than assembling templates, and hands over everything you paid for — you own it.
+
+**How it gets built:** with AI, daily and openly. Not from a template and not from a page builder — no third-party platform underneath, so the thing can still be fixed a year later. AI writes a lot of the code; I decide what gets built, check it, and stand behind it. That also means I can tell you where AI does not pay off, because I have already paid for finding out — sometimes a plain rule beats a model, and the token bill is part of the design rather than a surprise afterwards.
 
 ## Shipped Through Bruncsoft
 
