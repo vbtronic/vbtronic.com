@@ -6,8 +6,10 @@
   </div>
 </div>
 
+{{/* Only worth a "Recently Added" strip once there is more here than it would show —
+     with three items or fewer it just repeats the list below it verbatim. */}}
 {{ $latest := first 3 .Pages.ByDate.Reverse }}
-{{ if $latest }}
+{{ if gt (len .Pages) 3 }}
 <section class="latest-posts">
   <h2 class="latest-posts-heading">Recently Added</h2>
   <div class="latest-posts-grid">

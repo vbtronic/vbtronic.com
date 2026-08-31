@@ -1,4 +1,4 @@
 ---
 title: "Portfolio"
-description: "Projects, achievements, certificates, and creative work."
+description: "Sites and tools I have built and shipped."
 ---

@@ -1,4 +1,4 @@
 ---
 title: "Blog"
-description: "Posts, analyses, and thoughts by Viktor Brunclík."
+description: "Longer-form writing by Viktor Brunclík."
 ---

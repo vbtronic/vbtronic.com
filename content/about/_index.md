@@ -22,6 +22,7 @@ This website is where I keep all of it. I built it myself with Hugo and hand-wri
 
 Where I have done it:
 
+- [Portfolio](/portfolio/) — work built and finished, starting with [jakubkocman.cz](https://jakubkocman.cz)
 - [This website](https://github.com/vbtronic/vbtronic.com) — the code behind vbtronic.com
 - [Bruncsoft](https://bruncsoft.com) — the studio, and the work I take on through it
 - [Everything else](/products/) — the full list, including what came down again

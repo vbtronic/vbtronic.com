@@ -17,4 +17,4 @@ This website and its articles are created by Viktor with the help of AI tools **
 
 ## Contact
 
-You can reach Viktor through the [Contact](/contact/) page, or explore his work in the [Portfolio](/portfolio/) and [Posts](/posts/) sections.
+You can reach Viktor through the [Contact](/contact/) page, or explore his work in the [Portfolio](/portfolio/) and [Projects](/products/) sections.

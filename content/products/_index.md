@@ -14,7 +14,7 @@ Everything here I built myself, or shipped through [Bruncsoft](https://bruncsoft
 
 ## Writing
 
-I write about what I am working through — how AI models hallucinate and what the research says about fixing them, why I started Bruncsoft, what I got wrong. It is on the [Blog](/blog/).
+I write about what I am working through — what I built, why it was built that way, and what I got wrong. It is on the [Blog](/blog/).
 
 ## Work I Take On
 
@@ -41,7 +41,9 @@ The studio runs what it builds, builds from scratch rather than assembling templ
 - [MicroMem VLA](https://github.com/Bruncsoft/micromem-vla) — many small robot-skill models instead of one large one. Open source.
 - [Bruncsoft Connect](https://github.com/Bruncsoft/bruncsoft-connect) — a self-hosted integration hub that runs on the customer's own server and never talks back to us. Open source.
 
-Client work is not listed publicly — I ask before showing anybody's project.
+Client sites are shown only where the client is happy for them to be. Those are in the
+[Portfolio](/portfolio/) — starting with [jakubkocman.cz](https://jakubkocman.cz), a site for
+an electrician near Litoměřice. The rest I do not show.
 
 ## Retired
 

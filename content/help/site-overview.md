@@ -16,9 +16,9 @@ VB Tronic is a non-commercial personal website where Viktor presents his project
 Six sections are in the menu:
 
 - **Home** — The landing page: who Viktor is, what he builds, and links to everything else.
-- **Blog** — Posts, analyses, and longer-form writing.
+- **Blog** — Longer-form writing. Nothing published there yet.
 - **Projects** — What Viktor has built himself, and the work he takes on through Bruncsoft.
-- **Portfolio** — Achievements, certificates, and creative work.
+- **Portfolio** — Sites and tools he has built and finished.
 - **About Viktor Brunclík** — A bio page with his background and timeline.
 - **Contact** — Email, a message form, and a calendar for booking a meeting.
 
