@@ -34,7 +34,7 @@ The site uses your browser's localStorage to remember your theme preference (dar
 
 ### Third-Party Resources
 
-One article ([Why Does AI Hallucinate?](/blog/why-does-ai-hallucinate/)) loads the Chart.js library from the [jsDelivr CDN](https://www.jsdelivr.com/) to render charts. jsDelivr may log basic request data (IP, user agent) for their CDN purposes. This is the only third-party resource loaded anywhere on this site.
+None. No page on this site loads anything from another server — no CDN, no analytics, no embeds, no social widgets. The fonts (Inter and JetBrains Mono) are served from this site itself rather than from Google Fonts, so your browser never requests anything from a third party while you read.
 
 ## Your Rights
 
