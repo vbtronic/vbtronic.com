@@ -18,19 +18,26 @@ I write about what I am working through — what I built, why it was built that 
 
 ## Work I Take On
 
-Through [Bruncsoft](https://bruncsoft.com) — a small student studio, and **a brand rather than a company**. One person, so far. It no longer runs products of its own; it builds things for other people and finishes them.
+Through [Bruncsoft](https://bruncsoft.com) — a small student studio, and **a brand rather than a company**. One person, so far.
+
+### What I do regularly
 
 - **Websites** — from one page to a hundred. A static site starts at €120 and a dynamic one at €280. That is a guide price for the whole site, not a price per page, and it is agreed before any work starts. Both include Decap CMS, so you edit your own text and pictures without paying me to do it.
 - **Front end and back end** — the part people touch, and the database, API, logins and three-in-the-morning jobs underneath it.
+- **Hosting and maintenance** — offered on everything I build, billed monthly, cancel any time. A site nobody maintains is broken within a year.
+- **Print** — a business card is €16, or €24 with a QR code. You get print-ready files you own; the printing itself you arrange yourself.
+
+### What I am still learning
+
+These I am learning rather than selling as experience. I have not shipped them for a customer yet, and I would rather write that down than let you find out afterwards. Ask anyway — I will tell you straight whether I am the right person, and I will say no if I am not.
+
 - **Applications and e-shops** — something that does a job rather than describes one: a tool a team uses daily, an internal system, a customer portal, a shop that fits what you sell.
 - **AI tools** — built around your work, not bolted on, including [LiteLLM](https://bruncsoft.com/services/litellm) deployed, hosted and maintained. I will also tell you where AI does not pay off — sometimes a rule beats a model.
 - **Automation** — the repetitive work that eats hours a week: approvals stuck in email, data retyped into three systems. On your machines or on mine.
 - **Source research and checking** — for education platforms and companies that need to know where a claim came from: finding the sources, indexing them, and checking each one, including whether it is legally usable.
 - **Deepfake defence** — fake video calls, cloned voices, invented candidates. Fixing the process that grants trust, not just spotting the fake.
-- **Hosting and maintenance** — offered on everything, billed monthly, cancel any time. A site nobody maintains is broken within a year.
-- **Print** — a business card is €16, or €24 with a QR code. You get print-ready files you own; the printing itself you arrange yourself.
 
-Everything beyond those listed prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. **Bruncsoft is not VAT registered, so the number you see is the number you pay.** Full list and prices are on [bruncsoft.com](https://bruncsoft.com).
+Everything beyond the listed prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. **Bruncsoft is not VAT registered, so the number you see is the number you pay.** Full list and prices are on [bruncsoft.com](https://bruncsoft.com).
 
 The studio runs what it builds, builds from scratch rather than assembling templates, and hands over everything you paid for — you own it.
 
@@ -47,10 +54,6 @@ The studio runs what it builds, builds from scratch rather than assembling templ
 Client sites are shown only where the client is happy for them to be. Those are in the
 [Portfolio](/portfolio/) — starting with [jakubkocman.cz](https://jakubkocman.cz), a site for
 an electrician near Litoměřice. The rest I do not show.
-
-## Retired
-
-During 2026 the Bruncsoft products came down. Most were half-built, or competing with companies that will always outbuild us, so keeping them up was not honest. That includes the spell checker at chcek.bruncsoft.com, the 3D print shop, and the batteries app. **Nothing was deleted and nobody lost anything** — there were no accounts and no paid plans.
 
 ## Work With Me
 

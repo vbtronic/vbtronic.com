@@ -10,7 +10,9 @@ The **About Viktor Brunclík** section is a single page with Viktor's bio, what 
 ## What is on this page?
 
 - **Bio** — An introduction to Viktor Brunclík, his interests, and background.
-- **What I Build** — Websites, applications, AI tools and automation, and a pointer to the full list.
+- **What I Build** — Websites: the work he does regularly and has finished for customers.
+- **What I'm Learning** — Applications, AI tools, automation, and source research — written down as things he is learning rather than sold as experience.
+- **Where to See It** — Pointers to the portfolio, the studio, and the full project list.
 - **Links** — Quick links to Viktor's public profiles.
 - **Timeline** — Key milestones and achievements listed chronologically.
 
