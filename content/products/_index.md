@@ -18,7 +18,7 @@ I write about what I am working through — what I built, why it was built that 
 
 ## Work I Take On
 
-Through [Bruncsoft](https://bruncsoft.com) — a small student studio, and **a brand rather than a company**. One person, so far.
+Through [Bruncsoft](https://bruncsoft.com) — a small student studio. **It is not a company.** One person, so far.
 
 ### What I do regularly
 

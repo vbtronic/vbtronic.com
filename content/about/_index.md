@@ -9,7 +9,7 @@ I'm Viktor Brunclík — from Prague, Czech Republic. I love technology, program
 
 I started programming in 2025, mostly by building things and finding out what breaks. Websites are what I actually do — front end and back end, built and finished for real people. Everything else I am still learning, and I write about what I work out along the way.
 
-I'm also the founder and lead builder of [Bruncsoft](https://bruncsoft.com) — a small student studio that builds websites for other people. Bruncsoft is a brand, not a company, and it is deliberately small — one person, so far. You talk to the person who writes the code.
+I'm also the founder and lead builder of [Bruncsoft](https://bruncsoft.com) — a small student studio that builds websites for other people. **Bruncsoft is not a company.** It is one person, so far, and deliberately small. You talk to the person who writes the code.
 
 This website is where I keep all of it. I built it with Hugo and AI — no framework, no template and no page builder — and it deploys on every push. I build with AI every day and do not pretend otherwise; what I bring is deciding what gets built, checking it, and being the one who fixes it later.
 
