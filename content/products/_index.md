@@ -1,59 +1,21 @@
 ---
-title: "Projects"
-description: "What I have built — my own projects, and the work I take on through Bruncsoft."
+title: "Services"
+description: "What I build for other people through Bruncsoft — websites, business cards, marketing."
 aliases:
   - /produkty/
 ---
 
-Everything here I built myself, or shipped through [Bruncsoft](https://bruncsoft.com), the small studio I founded and run. Where the code is open, the link goes to it.
+The work I take on runs through [Bruncsoft](https://bruncsoft.com), the small studio I founded and run. **It is not a company.** One person, so far.
 
-## My Own Projects
-
-- [This website](https://github.com/vbtronic/vbtronic.com) — Hugo, its own CSS, no framework and no page builder. Built with AI, like everything else here. Every push deploys it.
-- [GitHub](https://github.com/vbtronic) — the rest of what I am working on, including the half-finished things.
-
-## Writing
-
-I write about what I am working through — what I built, why it was built that way, and what I got wrong. It is on the [Blog](/blog/).
-
-## Work I Take On
-
-Through [Bruncsoft](https://bruncsoft.com) — a small student studio. **It is not a company.** One person, so far.
-
-### What I do regularly
+## What I Do
 
 - **Websites** — from one page to a hundred. A static site starts at €120 and a dynamic one at €280. That is a guide price for the whole site, not a price per page, and it is agreed before any work starts. Both include Decap CMS, so you edit your own text and pictures without paying me to do it.
-- **Front end and back end** — the part people touch, and the database, API, logins and three-in-the-morning jobs underneath it.
-- **Hosting and maintenance** — offered on everything I build, billed monthly, cancel any time. A site nobody maintains is broken within a year.
-- **Print** — a business card is €16, or €24 with a QR code. You get print-ready files you own; the printing itself you arrange yourself.
+- **Business cards** — €16, or €24 with a QR code. You get print-ready files you own; the printing itself you arrange yourself.
+- **Marketing** — the words and pictures that go around all of it: what the site actually says, a landing page for one campaign, printed matter that matches the card. Quoted per project. Ask and I will tell you straight whether it is worth paying me for.
 
-### What I am still learning
+Everything beyond the listed prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. **Bruncsoft is not VAT registered, so the number you see is the number you pay.**
 
-These I am learning rather than selling as experience. I have not shipped them for a customer yet, and I would rather write that down than let you find out afterwards. Ask anyway — I will tell you straight whether I am the right person, and I will say no if I am not.
-
-- **Applications and e-shops** — something that does a job rather than describes one: a tool a team uses daily, an internal system, a customer portal, a shop that fits what you sell.
-- **AI tools** — built around your work, not bolted on, including [LiteLLM](https://bruncsoft.com/services/litellm) deployed, hosted and maintained. I will also tell you where AI does not pay off — sometimes a rule beats a model.
-- **Automation** — the repetitive work that eats hours a week: approvals stuck in email, data retyped into three systems. On your machines or on mine.
-- **Source research and checking** — for education platforms and companies that need to know where a claim came from: finding the sources, indexing them, and checking each one, including whether it is legally usable.
-- **Deepfake defence** — fake video calls, cloned voices, invented candidates. Fixing the process that grants trust, not just spotting the fake.
-
-Everything beyond the listed prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. **Bruncsoft is not VAT registered, so the number you see is the number you pay.** Full list and prices are on [bruncsoft.com](https://bruncsoft.com).
-
-The studio runs what it builds, builds from scratch rather than assembling templates, and hands over everything you paid for — you own it.
-
-**How it gets built:** with AI, daily and openly. Not from a template and not from a page builder — no third-party platform underneath, so the thing can still be fixed a year later. AI writes a lot of the code; I decide what gets built, check it, and stand behind it. That also means I can tell you where AI does not pay off, because I have already paid for finding out — sometimes a plain rule beats a model, and the token bill is part of the design rather than a surprise afterwards.
-
-## Shipped Through Bruncsoft
-
-- [expirescan.com](https://expirescan.com) — AI-powered expiring-domain intelligence: finds and watches domains as they come free.
-- [Prompt Scrub](https://github.com/Bruncsoft/prompt-scrub) — a trained model that finds and redacts names, passwords, API keys and card numbers entirely inside the browser, so the data never leaves the machine. Open source.
-- [Chess move prediction](https://github.com/Bruncsoft/chess-human-move) — a model that predicts the move a *human* will play, not the engine-best one. Measured on a month it never saw: 38.5% top-1, 64.0% top-3. Open source.
-- [MicroMem VLA](https://github.com/Bruncsoft/micromem-vla) — many small robot-skill models instead of one large one. Open source.
-- [Bruncsoft Connect](https://github.com/Bruncsoft/bruncsoft-connect) — a self-hosted integration hub that runs on the customer's own server and never talks back to us. Open source.
-
-Client sites are shown only where the client is happy for them to be. Those are in the
-[Portfolio](/portfolio/) — starting with [jakubkocman.cz](https://jakubkocman.cz), a site for
-an electrician near Litoměřice. The rest I do not show.
+**How it gets built:** with AI, daily and openly. Not from a template and not from a page builder — no third-party platform underneath, so the thing can still be fixed a year later. AI writes a lot of the code; I decide what gets built, check it, and stand behind it. The studio hands over everything you paid for — you own it.
 
 ## Work With Me
 

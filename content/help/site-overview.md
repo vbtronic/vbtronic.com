@@ -17,7 +17,7 @@ Six sections are in the menu:
 
 - **Home** — The landing page: who Viktor is, what he builds, and links to everything else.
 - **Blog** — Longer-form writing. Nothing published there yet.
-- **Projects** — What Viktor has built himself, and the work he takes on through Bruncsoft.
+- **Services** — The work he takes on through Bruncsoft: websites, business cards, and marketing, with prices.
 - **Portfolio** — Sites and tools he has built and finished.
 - **About Viktor Brunclík** — A bio page with his background and timeline.
 - **Contact** — Email, a message form, and a calendar for booking a meeting.
