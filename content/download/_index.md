@@ -1,11 +1,10 @@
 ---
-title: "Download"
-description: "The whole site as one plain text file."
-outputs: ["html", "text"]
+title: "For AI"
+description: "Metadata for every page of this site, in one file for AI tools."
 ---
 
-Every page of this site as plain text, in one file — no HTML, no styling, no scripts. Useful for reading offline, printing, searching, or handing to a tool.
+Every page of this site — its title, address, short description and date — listed in one plain text file. It follows the [llms.txt](https://llmstxt.org) convention, so AI assistants and other tools can see what is here and where to find it without reading the whole site.
 
-<a href="/download/vbtronic.txt" download class="hero-btn hero-btn--primary">Download vbtronic.txt</a>
+<a href="/llms.txt" class="hero-btn hero-btn--primary">Open llms.txt</a>
 
 The file is rebuilt with the site, so it always matches what is published here.

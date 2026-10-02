@@ -1563,11 +1563,9 @@ pre code {
 }
 
 .footer-legal-card {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem 1rem;
+  padding: 0.4rem 0.75rem;
   background: var(--color-surface-1);
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -1588,22 +1586,16 @@ pre code {
 }
 
 .footer-legal-heading {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: var(--color-text-heading);
-  margin-bottom: 0.2rem;
-}
-
-.footer-legal-desc {
-  font-size: 0.75rem;
-  color: var(--color-text-faint);
   margin-bottom: 0;
-  line-height: 1.4;
 }
 
 .footer-legal-arrow {
+  display: flex;
   color: var(--color-text-faintest);
-  margin-left: 0.75rem;
+  margin-left: 0.4rem;
   flex-shrink: 0;
 }
 

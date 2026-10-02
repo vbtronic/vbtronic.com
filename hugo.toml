@@ -10,11 +10,14 @@ taxonomies = {}
   description = "I build websites, business cards and the marketing around them, write about what I learn, and run Bruncsoft — a small student studio."
   author = "Viktor Brunclík"
 
-[outputFormats.text]
+[outputFormats.llms]
   mediaType = 'text/plain'
-  baseName = 'vbtronic'
+  baseName = 'llms'
   isPlainText = true
   notAlternative = true
+
+[outputs]
+  home = ['html', 'llms']
 
 [markup]
   [markup.highlight]
