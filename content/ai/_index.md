@@ -1,5 +1,7 @@
 ---
 title: "For AI"
+aliases:
+  - /download/
 description: "Metadata for every page of this site, in one file for AI tools."
 ---
 
