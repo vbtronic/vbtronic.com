@@ -15,6 +15,6 @@ This site collects no personal data. No analytics, no tracking, no ads, no cooki
 
 ## Your rights
 
-Under the GDPR you can ask what I hold about you, have it corrected or deleted, limit or object to its use, and get a copy of it. The [European Commission explains each right](https://commission.europa.eu/law/law-topic/data-protection/rights-citizens_en). Write to <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a> and I will answer within a month.
+Under the GDPR you can ask what I hold about you, have it corrected or deleted, limit or object to its use, and get a copy of it. The [European Commission explains them](https://commission.europa.eu/law/law-topic/data-protection_en). Write to <a href="mailto:vb&#64;vbtronic.com" class="contact-email-link">vb&#64;vbtronic.com</a> and I will answer within a month.
 
 Some emails I may keep unchanged even if you ask me to delete or edit them — for example an order, a quote or an agreement I may need as evidence of what was agreed, or records the law requires me to keep. I keep them only as long as that need lasts and tell you why. If you think I got it wrong, you can complain to the Czech data protection authority, [ÚOOÚ](https://uoou.gov.cz).
