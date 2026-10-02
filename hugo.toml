@@ -10,6 +10,12 @@ taxonomies = {}
   description = "I build websites, business cards and the marketing around them, write about what I learn, and run Bruncsoft — a small student studio."
   author = "Viktor Brunclík"
 
+[outputFormats.text]
+  mediaType = 'text/plain'
+  baseName = 'vbtronic'
+  isPlainText = true
+  notAlternative = true
+
 [markup]
   [markup.highlight]
     style = 'monokai'

@@ -13,7 +13,7 @@ The site has a [Privacy Policy](/privacy/) page accessible from the footer of ev
 
 - The site does not collect any personal data
 - How email contact data is handled
-- What localStorage and sessionStorage are used for
+- What localStorage is used for
 - How GitHub Pages hosting may log IP addresses
 
 ## AI disclosure

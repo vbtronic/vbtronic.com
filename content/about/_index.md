@@ -17,7 +17,7 @@ This website is where I keep all of it. I built it with Hugo and AI — no frame
 
 Three things, through [Bruncsoft](https://bruncsoft.com):
 
-- **Websites** — front end and back end, built with AI, from scratch rather than from a template. This is the one I do regularly and have finished for paying customers.
+- **Websites** — front end and back end, built with AI, from scratch rather than from a template. This is the one I do regularly and have finished for paying customers. That includes custom online shops — a cart and an order, with payment arranged directly rather than through a payment gateway.
 - **Business cards** — print-ready files you own; the printing you arrange yourself.
 - **Marketing** — the words and pictures that go around both: what the site actually says, a landing page, printed matter that matches the card.
 
