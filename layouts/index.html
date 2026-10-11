@@ -6,9 +6,9 @@
     <h1 class="hero-title">Viktor Brunclík</h1>
     <p class="hero-subtitle">{{ .Site.Params.description }}</p>
     <div class="hero-actions">
+      <!-- Was five. "Writing" and "About me" are menu items one tap away; a hero that
+           lists the menu again is a hero with nothing of its own to say. -->
       <a href="#what-i-build" class="hero-btn hero-btn--primary">What I build</a>
-      <a href="/blog/" class="hero-btn hero-btn--secondary">Writing</a>
-      <a href="/about/" class="hero-btn hero-btn--secondary">About me</a>
       <a href="https://github.com/vbtronic" target="_blank" rel="noopener" class="hero-btn hero-btn--secondary">GitHub</a>
       <a href="https://x.com/ViktorBrunclik" target="_blank" rel="noopener" class="hero-btn hero-btn--secondary">&#120143; @ViktorBrunclik</a>
     </div>
@@ -42,77 +42,33 @@
       <a href="/products/" class="about-link">How it works</a>
     </div>
 
-    <div class="grid-card">
-      <div class="grid-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-      <h3>Writing</h3>
-      <p>Longer pieces about what I am working through — what I learned building something, and what turned out to be wrong. The blog is where they go.</p>
-      <a href="/blog/" class="about-link">Read the blog</a>
-    </div>
-
-    <div class="grid-card">
-      <div class="grid-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
-      <h3>Work I have shipped</h3>
-      <p>Sites built for real people and finished — what they needed, how it was put together, and why it was built that way rather than another.</p>
-      <a href="/portfolio/" class="about-link">See the portfolio</a>
-    </div>
+    <!-- The "Writing" and "Work I have shipped" cards were removed 2026-10-11. Their whole
+         content was "the blog is where they go" and "see the portfolio" — and Blog and
+         Portfolio are both menu items. A card that exists to repeat a menu entry is
+         furniture. What is left is the three things actually sold. -->
 
   </div>
 </section>
 
+<!-- The career CAROUSEL was removed 2026-10-11 ("zkrať"). It held one real entry and a
+     placeholder card reading "Coming soon / More / …", slid past each other by 35 lines of
+     JavaScript every 4.8 seconds. A career carousel with one job in it is theatre, and the
+     placeholder told a visitor there is more than there is. The one real entry is below,
+     as a plain card. AGENTS.md asks for no JavaScript unless necessary; this was the
+     clearest case of the opposite on the site. -->
 <section class="career-section">
   <h2 class="career-section-heading">Career</h2>
-  <div class="career-scroll-container">
-    <div class="career-scroll" id="career-scroll">
-
-      <details class="career-card">
-        <summary>
-          <span class="career-period">2026 – Present</span>
-          <span class="career-name">Bruncsoft</span>
-          <span class="career-role">Founder &amp; Lead Builder</span>
-        </summary>
-        <div class="career-detail">
-          <p>A small student studio. It is not a company — one person, so far. Websites built for other people and finished, the business cards that go with them, and the marketing around both.</p>
-          <p><a href="https://bruncsoft.com" target="_blank" rel="noopener noreferrer">bruncsoft.com</a></p>
-        </div>
-      </details>
-
-      <div class="career-card career-card--future" aria-hidden="true">
-        <div class="career-card-placeholder">
-          <span class="career-period">Coming soon</span>
-          <span class="career-name">More</span>
-          <span class="career-role">…</span>
-        </div>
-      </div>
-
+  <details class="career-card" open>
+    <summary>
+      <span class="career-period">2026 &ndash; Present</span>
+      <span class="career-name">Bruncsoft</span>
+      <span class="career-role">Founder &amp; Lead Builder</span>
+    </summary>
+    <div class="career-detail">
+      <p>A small student studio. It is not a company &mdash; one person, so far. Websites built for other people and finished, the business cards that go with them, and the marketing around both.</p>
+      <p><a href="https://bruncsoft.com" target="_blank" rel="noopener noreferrer">bruncsoft.com</a></p>
     </div>
-  </div>
-  <script>
-  (function() {
-    var track = document.getElementById('career-scroll');
-    if (!track) return;
-    var SHIFT = 256;
-    function cycle() {
-      // slide left — card exits to the left
-      track.style.transition = 'transform 0.75s ease-in-out';
-      track.style.transform = 'translateX(-' + SHIFT + 'px)';
-      setTimeout(function() {
-        // instant jump to the right — invisible, no transition
-        track.style.transition = 'none';
-        track.style.transform = 'translateX(' + SHIFT + 'px)';
-        // two rAFs ensure the browser paints the jump before re-enabling transition
-        requestAnimationFrame(function() {
-          requestAnimationFrame(function() {
-            // slide back to center — card enters from the right
-            track.style.transition = 'transform 0.75s ease-in-out';
-            track.style.transform = 'translateX(0)';
-            setTimeout(cycle, 3800);
-          });
-        });
-      }, 1100);
-    }
-    setTimeout(cycle, 1000);
-  })();
-  </script>
+  </details>
 </section>
 
 
@@ -120,7 +76,10 @@
   <div class="work-card-body">
     <div class="work-card-text">
       <h2 class="work-card-heading">Want something built?</h2>
-      <p>I take on work through <a href="https://bruncsoft.com" target="_blank" rel="noopener">Bruncsoft</a>, the small student studio I founded and run. Three things: websites, business cards and the marketing around them. A static site starts at €120 and a dynamic one at €280, whole site rather than per page; a card is €16, or €24 with a QR code. Bruncsoft is not VAT registered, so the number you see is the number you pay. Marketing is quoted per project in writing before anything starts — and if I am the wrong person for it I will say so rather than take the work.</p>
+      <!-- Shortened 2026-10-11: this listed every price a second time, word for word from
+           the cards above. The two facts NOT said up there are the ones kept — no VAT, and
+           that I say when I am the wrong person for the job. -->
+      <p>I take on work through <a href="https://bruncsoft.com" target="_blank" rel="noopener">Bruncsoft</a>, the small student studio I founded and run. Not VAT registered, so the number you see is the number you pay — and if I am the wrong person for the job I will say so rather than take the work.</p>
       <a href="/contact/" class="work-card-cta">Get in touch</a>
     </div>
     <div class="work-card-motto">
@@ -134,12 +93,9 @@
   <div class="about-body">
     <p>This is my own corner of the web — what I am building, what I am reading, and what I have worked out along the way. I write it, I built it, and it changes as I do.</p>
   </div>
+  <!-- Five of these seven links were the MENU, repeated. The two that are not in the menu
+       are the two worth having here. -->
   <div class="about-links">
-    <a href="/about/" class="about-link">About Viktor Brunclík</a>
-    <a href="/blog/" class="about-link">Blog</a>
-    <a href="/products/" class="about-link">Services</a>
-    <a href="/portfolio/" class="about-link">Portfolio</a>
-    <a href="/contact/" class="about-link">Contact</a>
     <a href="/ai/" class="about-link">For AI</a>
     <a href="https://bruncsoft.com" target="_blank" rel="noopener" class="about-link">bruncsoft.com</a>
   </div>
