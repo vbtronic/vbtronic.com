@@ -11,10 +11,12 @@ The work I take on runs through [Bruncsoft](https://bruncsoft.com), the small st
 
 - **Websites** — from one page to a hundred. A static site starts at €120 and a dynamic one at €280. That is a guide price for the whole site, not a price per page, and it is agreed before any work starts. Both include Decap CMS, so you edit your own text and pictures without paying me to do it.
 - **Custom online shops** — a website with a catalogue and a cart, built for your products rather than squeezed into a shop platform. The customer fills the cart and sends the order; payment is then arranged between you and them as you agree. There is no payment gateway, so no card fees and no merchant account to run. Quoted per project.
-- **Business cards** — €16, or €24 with a QR code. You get print-ready files you own; the printing itself you arrange yourself.
+- **Business cards** — €16, or €24 with a QR code. You get print-ready files you own. Take them to any printer, or I can arrange the printing for you — the printer's charge is not in that price, and I tell you what it is before anything is ordered.
 - **Marketing** — the words and pictures that go around all of it: what the site actually says, a landing page for one campaign, printed matter that matches the card. Quoted per project. Ask and I will tell you straight whether it is worth paying me for.
 
-Everything beyond the listed prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. **Bruncsoft is not VAT registered, so the number you see is the number you pay.**
+Everything beyond the listed prices is quoted per project, in writing, before anything begins. No work starts until it is agreed. **Bruncsoft is not VAT registered, so in the Czech Republic the number you see is the number you pay.**
+
+**Outside the Czech Republic — in the EU above all — VAT is yours to handle.** If your business is VAT registered in another EU country, the reverse charge applies: you account for the VAT in your own country. Outside the EU, whatever your country charges on services bought from abroad is yours to pay. A private person pays the number on the page.
 
 **How it gets built:** with AI, daily and openly. Not from a template and not from a page builder — no third-party platform underneath, so the thing can still be fixed a year later. AI writes a lot of the code; I decide what gets built, check it, and stand behind it. The studio hands over everything you paid for — you own it.
 
