@@ -7,7 +7,7 @@ disableKinds = ['RSS']
 taxonomies = {}
 
 [params]
-  description = "I build websites, business cards and the marketing around them, write about what I learn, and run Bruncsoft — a small student studio."
+  description = "I build websites, business cards and the marketing around them, through Bruncsoft — a small student studio I founded and run."
   author = "Viktor Brunclík"
 
 [outputFormats.llms]
@@ -25,29 +25,3 @@ taxonomies = {}
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[menu]
-  [[menu.main]]
-    name = 'Home'
-    url = '/'
-    weight = 1
-  [[menu.main]]
-    name = 'Blog'
-    url = '/blog/'
-    weight = 2
-  [[menu.main]]
-    name = 'Services'
-    url = '/products/'
-    weight = 3
-  [[menu.main]]
-    name = 'Portfolio'
-    url = '/portfolio/'
-    weight = 4
-  [[menu.main]]
-    name = 'About Viktor Brunclík'
-    url = '/about/'
-    weight = 5
-  [[menu.main]]
-    name = 'Contact'
-    url = '/contact/'
-    weight = 6

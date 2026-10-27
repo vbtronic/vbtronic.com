@@ -24,28 +24,9 @@ The dev server runs at `http://localhost:1313` by default.
 
 All content lives in the `content/` directory as Markdown files:
 
-- `content/_index.md` — Home page (bio, projects)
-- `content/posts/` — Blog posts
-
-### Adding a New Post
-
-Create a new Markdown file in `content/posts/`:
-
-```bash
-hugo new posts/my-new-post.md
-```
-
-Or manually create a file with frontmatter:
-
-```markdown
----
-title: "My New Post"
-date: 2026-02-07
-description: "A brief description."
----
-
-Your content here.
-```
+- `content/_index.md` — the whole site: one page of text (bio, what I build, work, contact)
+- `content/privacy/_index.md` — Privacy Policy
+- `content/ai/_index.md` — For AI (the site also outputs `/llms.txt`)
 
 ## Deployment (CI/CD)
 
@@ -60,16 +41,6 @@ This site is deployed automatically to GitHub Pages via GitHub Actions.
 > **Important:** Pages must be enabled (steps 1–2) *before* the first push, otherwise the workflow will fail with a `configure-pages` error.
 
 The workflow is defined in `.github/workflows/deploy.yml`.
-
-### Contact Form (FormSubmit)
-
-The site uses [FormSubmit](https://formsubmit.co/) for contact forms (external backend + inbox delivery, no custom backend/database in this repo).
-
-No GitHub secret is needed. Forms post directly to:
-
-`https://formsubmit.co/vb@vbtronic.com`
-
-On first submission, FormSubmit may ask for activation/confirmation of the destination email inbox.
 
 ### Custom Domain
 
@@ -90,12 +61,13 @@ The primary domain is `www.vbtronic.com`, with the apex `vbtronic.com` redirecti
 
 ```
 ├── content/          # Markdown content
-│   ├── _index.md     # Home page
-│   └── posts/        # Blog posts
+│   ├── _index.md     # Home page — the whole site
+│   ├── privacy/
+│   └── ai/
 ├── layouts/          # HTML templates
-│   ├── _default/     # Default templates
-│   └── index.html    # Home page template
-├── static/           # Static assets (CSS, images)
+│   ├── _default/     # baseof.html + list.html
+│   └── index.llms.txt
+├── static/           # CSS, fonts, favicons, redirects from old URLs
 │   └── css/
 ├── hugo.toml         # Hugo configuration
 └── .github/
@@ -106,4 +78,4 @@ The primary domain is `www.vbtronic.com`, with the apex `vbtronic.com` redirecti
 
 Source code is licensed under the [MIT License](LICENSE).
 
-Content (articles, blog posts, text) © Viktor Brunclík. All rights reserved.
+Content (text) © Viktor Brunclík. All rights reserved.

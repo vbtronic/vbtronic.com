@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /contact
+Disallow:
 
 Sitemap: https://vbtronic.com/sitemap.xml

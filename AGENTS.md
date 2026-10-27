@@ -4,7 +4,9 @@ Instructions for AI coding agents working on this repository.
 
 ## Project Overview
 
-This is a Hugo static site for vbtronic.com — Viktor Brunclík's personal website.
+This is a Hugo static site for vbtronic.com — Viktor Brunclík's personal website. It is **one page**
+of text, in the spirit of jaroslavbeck.com: no menu, no cards, no forms. Besides the home page there
+are only Privacy (`/privacy/`) and For AI (`/ai/`, plus `/llms.txt`).
 
 ## Tech Stack
 
@@ -23,23 +25,23 @@ hugo server -D
 # Build for production
 hugo --minify
 
-# Create a new post
-hugo new posts/my-post-title.md
 ```
 
 ## Content Authoring
 
 - All content is in `content/` as Markdown files with YAML frontmatter
-- Posts go in `content/posts/` with frontmatter: `title`, `date`, `description`
-- Home page content is in `content/_index.md`
+- Everything a visitor reads is in `content/_index.md`, as Markdown with `## Heading {#id}` sections.
+  Add to it rather than adding pages
+- Old URLs (`/about/`, `/products/`, `/portfolio/`, `/contact/`, `/blog/` …) are meta-refresh
+  redirects in `static/<path>/index.html`, pointing at the matching `#section`
 - Images should be placed in `static/images/`
 - **Date/time in frontmatter must use the actual current time** — never hardcode `12:00:00` or guess. Use `date` command to get the real time before creating content
 
 ## Code Conventions
 
 - **CSS**: No frameworks. All styles in `static/css/style.css`. Use CSS custom properties for theming
-- **Templates**: Hugo Go templates in `layouts/`. Base template is `layouts/_default/baseof.html`
-- **No JavaScript** unless absolutely necessary. Keep it static and fast
+- **Templates**: `layouts/_default/baseof.html` plus one `list.html` (title + content) for every page
+- **No JavaScript** unless absolutely necessary. The only script is the theme switch. Keep it static and fast
 - **No build tools** beyond Hugo itself
 
 ## Design System
@@ -54,9 +56,8 @@ to match bruncsoft.com; only the *content* facts about the studio are kept in st
 - Background: `#f5f6f8` light (elevated `#ffffff`) / `#121418` dark (elevated `#1a1d23`)
 - Text headings: `#1a1a2e` / `#f0f0f2`
 - Font body: Inter. Font mono: JetBrains Mono, for dates and code only
-- Radii: 12px cards, 8px small elements, 20px pills
-- Nav: hamburger opens a dropdown panel anchored under the header — it is
-  `position: absolute` inside `<header>`, so it must stay inside it
+- Radii: 8px small elements
+- Layout: one text column, max 640px, 16px side gutter. Header is just the logo and theme switch
 - Every colour goes through a `--color-*` custom property. Never hard-code a hex outside
   the two palette blocks at the top of `style.css`
 
