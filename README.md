@@ -2,7 +2,7 @@
 
 Personal website of Viktor Brunclík. Built with [Hugo](https://gohugo.io/).
 
-Live site: [https://www.vbtronic.com](https://www.vbtronic.com)
+Live site: [https://vbtronic.com](https://vbtronic.com)
 
 ## Prerequisites
 
@@ -44,12 +44,12 @@ The workflow is defined in `.github/workflows/deploy.yml`.
 
 ### Custom Domain
 
-The primary domain is `www.vbtronic.com`, with the apex `vbtronic.com` redirecting to it.
+The primary domain is the apex `vbtronic.com`; `www.vbtronic.com` redirects to it.
 
-1. In **Settings → Pages**, enter `www.vbtronic.com` as your custom domain
+1. In **Settings → Pages**, enter `vbtronic.com` as your custom domain
 2. Add DNS records with your domain registrar:
-   - `www` subdomain: **CNAME** record pointing to `vbtronic.github.io`
-   - Apex domain (`vbtronic.com`): **A** records pointing to GitHub Pages IPs (this enables the redirect to `www`):
+   - `www` subdomain: **CNAME** record pointing to `vbtronic.github.io` (GitHub redirects it to the apex)
+   - Apex domain (`vbtronic.com`): **A** records pointing to GitHub Pages IPs (this serves the site):
      - `185.199.108.153`
      - `185.199.109.153`
      - `185.199.110.153`
