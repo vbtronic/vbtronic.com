@@ -26,6 +26,8 @@ If I am the wrong person for the job, I will say so rather than take it.
 <li><time>2026</time> <a href="https://jakubkocman.cz" target="_blank" rel="noopener noreferrer">jakubkocman.cz</a> — one page for an electrician near Litoměřice: who he is, his work, reviews, and his phone number where you want it. Static, no contact form, made for a phone.</li>
 </ol>
 
+I always ask before I list someone's site here, so most of what I have built is not on this list.
+
 ## Elsewhere {#elsewhere}
 
 - [GitHub](https://github.com/vbtronic)
