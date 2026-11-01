@@ -3,7 +3,7 @@ title: "Ochrana soukromí"
 description: "Jak vbtronic.com zachází s vašimi daty."
 ---
 
-*Naposledy upraveno 27. října 2026.*
+*Naposledy upraveno 1. listopadu 2026.*
 
 Tento web nesbírá žádné osobní údaje. Žádná analytika, žádné sledování, žádné reklamy, žádné cookies a nic se nenačítá z jiného serveru — i písma jsou servírována odsud.
 
@@ -12,6 +12,7 @@ Tento web nesbírá žádné osobní údaje. Žádná analytika, žádné sledov
 - **E-mail.** Když napíšete na vb&#64;vbtronic.com, vaši adresu a zprávu použiju jen k odpovědi. Nejsou tu žádné formuláře; tento web nic neukládá.
 - **Hosting.** Web běží na [GitHub Pages](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement), které může zaznamenat vaši IP adresu a prohlížeč, jako každý webový server.
 - **Motiv.** Vaše volba světlého/tmavého režimu se ukládá v localStorage vašeho prohlížeče a nikdy ho neopouští.
+- **Jazyk.** Volba češtiny nebo angličtiny je jen součástí adresy (`/cs/`). Nic se kvůli ní neukládá.
 
 ## Vaše práva
 

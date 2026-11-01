@@ -82,6 +82,11 @@ a:hover { color: var(--color-accent-hover); text-decoration-color: currentColor;
 
 strong { color: var(--color-text-heading); font-weight: 600; }
 
+code {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.875em;
+}
+
 /* --- Header --- */
 .site-header,
 .page,
@@ -111,29 +116,38 @@ strong { color: var(--color-text-heading); font-weight: 600; }
   gap: 8px;
 }
 
-/* Language switch: EN | CZ, the current one in the accent colour */
+/* Language switch: a small pill, the current language on a soft green chip */
 .lang-switch {
   display: flex;
+  gap: 2px;
   height: 36px;
+  padding: 3px;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   background: var(--color-bg-elevated);
-  overflow: hidden;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
 }
 .lang-switch a,
 .lang-switch span {
   display: grid;
   place-items: center;
-  min-width: 36px;
+  min-width: 32px;
   padding: 0 8px;
+  border-radius: 5px;
   text-decoration: none;
+  transition: color 0.15s, background-color 0.15s;
 }
 .lang-switch a { color: var(--color-text-muted); }
-.lang-switch a:hover { color: var(--color-accent); }
-.lang-switch span { color: var(--color-accent); }
-.lang-switch > * + * { border-left: 1px solid var(--color-border); }
+.lang-switch a:hover {
+  color: var(--color-text-heading);
+  background: var(--color-bg-primary);
+}
+.lang-switch span {
+  color: var(--color-accent);
+  background: var(--color-accent-selection);
+}
 
 .theme-toggle {
   display: grid;

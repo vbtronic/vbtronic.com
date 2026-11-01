@@ -4,7 +4,7 @@
 > {{ site.Params.description }}
 
 - Site: {{ site.BaseURL }}
-- Author: {{ site.Params.author }}, Prague, Czech Republic; student at Mensa gymnázium
+- Author: {{ site.Params.author }}, Prague, Czech Republic; secondary-school (gymnázium) student
 - Contact: vb@vbtronic.com
 - Languages: English (default, {{ site.BaseURL }}), Czech ({{ site.BaseURL }}cs/)
 - Studio: Bruncsoft (https://bruncsoft.com), a one-person student studio, not a company
@@ -14,7 +14,7 @@
 ## Pages
 
 - [Home]({{ site.BaseURL }}): the whole site on one page — who I am, what I build and what it costs, work, links, contact
-  - [What I build]({{ site.BaseURL }}#build): websites, online shops, business cards, marketing, with prices and VAT
+  - [What I build]({{ site.BaseURL }}#build): websites, online shops, marketing (business cards included), with prices and VAT
   - [Work]({{ site.BaseURL }}#work): client sites I have built and shipped
   - [Contact]({{ site.BaseURL }}#contact): email
 {{ range slice "privacy" "ai" -}}

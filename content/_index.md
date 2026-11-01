@@ -1,9 +1,9 @@
 ---
 title: "Viktor Brunclík"
-description: "I build websites, business cards and the marketing around them, through Bruncsoft — a small student studio I founded and run."
+description: "I build websites and the marketing around them, business cards included, through Bruncsoft — a small student studio I founded and run."
 ---
 
-I'm a student at Mensa gymnázium, a secondary school in Prague, Czech Republic. I build websites, business cards and the marketing around them through [Bruncsoft](https://bruncsoft.com), the small student studio I founded and run. **It is not a company** — one person, so far, and deliberately small. You talk to the person who writes the code.
+I'm from Prague, Czech Republic, and a student at a gymnázium, a Czech secondary school. I build websites and the marketing around them, business cards included through [Bruncsoft](https://bruncsoft.com), the small student studio I founded and run. **It is not a company** — one person, so far, and deliberately small. You talk to the person who writes the code.
 
 I build with AI every day and do not pretend otherwise. AI writes a lot of the code; I decide what gets built, check it, and stand behind it. This site is built that way: Hugo, its own CSS, no framework, deployed on every push. [The code is public](https://github.com/vbtronic/vbtronic.com).
 
@@ -13,8 +13,7 @@ Away from the screen: reading, law and politics, and learning something new ever
 
 - **Websites** — from scratch, not from a template or a page builder. A static site starts at €120 and a dynamic one at €280, for the whole site rather than per page, agreed before any work starts. Both come with Decap CMS, so you edit your own text and pictures.
 - **Online shops** — a catalogue and a cart built for your products. The customer sends the order and payment is arranged between you and them: no payment gateway, no card fees. Quoted per project.
-- **Business cards** — €16, or €24 with a QR code. Print-ready files you own. Take them to any printer, or I arrange the printing and tell you the printer's charge before anything is ordered.
-- **Marketing** — what the site actually says, a landing page for one campaign, printed matter that matches the card. Quoted per project.
+- **Marketing** — what the site actually says, a landing page for one campaign, business cards and other printed matter that matches them. Business cards are €16, or €24 with a QR code: print-ready files you own. Take them to any printer, or I arrange the printing and tell you the printer's charge before anything is ordered. The rest is quoted per project.
 
 Anything beyond these prices is quoted in writing before work begins. Bruncsoft is not VAT registered, so in the Czech Republic the number you see is the number you pay. Outside it the VAT is yours: a VAT-registered EU business accounts for it at home under the reverse charge, and outside the EU whatever your country charges on services bought from abroad is yours to pay. A private person pays the number on the page.
 

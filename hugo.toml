@@ -17,13 +17,13 @@ taxonomies = {}
     languageName = 'English'
     weight = 1
     [languages.en.params]
-      description = "I build websites, business cards and the marketing around them, through Bruncsoft — a small student studio I founded and run."
+      description = "I build websites and the marketing around them, business cards included, through Bruncsoft — a small student studio I founded and run."
   [languages.cs]
     languageCode = 'cs-CZ'
     languageName = 'Čeština'
     weight = 2
     [languages.cs.params]
-      description = "Dělám weby, vizitky a marketing kolem nich přes Bruncsoft — malé studentské studio, které jsem založil a vedu."
+      description = "Dělám weby a marketing kolem nich, včetně vizitek přes Bruncsoft — malé studentské studio, které jsem založil a vedu."
 
 [outputFormats.llms]
   mediaType = 'text/plain'
