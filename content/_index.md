@@ -3,7 +3,7 @@ title: "Viktor Brunclík"
 description: "I build websites, business cards and the marketing around them, through Bruncsoft — a small student studio I founded and run."
 ---
 
-I'm from Prague, Czech Republic. I build websites, business cards and the marketing around them through [Bruncsoft](https://bruncsoft.com), the small student studio I founded and run. **It is not a company** — one person, so far, and deliberately small. You talk to the person who writes the code.
+I'm a student at Mensa gymnázium, a secondary school in Prague, Czech Republic. I build websites, business cards and the marketing around them through [Bruncsoft](https://bruncsoft.com), the small student studio I founded and run. **It is not a company** — one person, so far, and deliberately small. You talk to the person who writes the code.
 
 I build with AI every day and do not pretend otherwise. AI writes a lot of the code; I decide what gets built, check it, and stand behind it. This site is built that way: Hugo, its own CSS, no framework, deployed on every push. [The code is public](https://github.com/vbtronic/vbtronic.com).
 

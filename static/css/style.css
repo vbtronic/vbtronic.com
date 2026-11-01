@@ -105,6 +105,36 @@ strong { color: var(--color-text-heading); font-weight: 600; }
 }
 .site-logo .accent { color: var(--color-accent); }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Language switch: EN | CZ, the current one in the accent colour */
+.lang-switch {
+  display: flex;
+  height: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.lang-switch a,
+.lang-switch span {
+  display: grid;
+  place-items: center;
+  min-width: 36px;
+  padding: 0 8px;
+  text-decoration: none;
+}
+.lang-switch a { color: var(--color-text-muted); }
+.lang-switch a:hover { color: var(--color-accent); }
+.lang-switch span { color: var(--color-accent); }
+.lang-switch > * + * { border-left: 1px solid var(--color-border); }
+
 .theme-toggle {
   display: grid;
   place-items: center;

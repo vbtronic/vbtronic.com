@@ -8,6 +8,10 @@ This is a Hugo static site for vbtronic.com — Viktor Brunclík's personal webs
 of text, in the spirit of jaroslavbeck.com: no menu, no cards, no forms. Besides the home page there
 are only Privacy (`/privacy/`) and For AI (`/ai/`, plus `/llms.txt`).
 
+The site is in two languages: **English is the default** at `/`, Czech at `/cs/`. Every page has a
+Czech twin next to it (`_index.md` + `_index.cs.md`); change both together. UI strings (footer,
+aria labels) are in `i18n/en.toml` and `i18n/cs.toml`. The header has an EN | CZ switch.
+
 ## Tech Stack
 
 - **Static site generator**: Hugo (extended edition)
@@ -57,7 +61,7 @@ to match bruncsoft.com; only the *content* facts about the studio are kept in st
 - Text headings: `#1a1a2e` / `#f0f0f2`
 - Font body: Inter. Font mono: JetBrains Mono, for dates and code only
 - Radii: 8px small elements
-- Layout: one text column, max 640px, 16px side gutter. Header is just the logo and theme switch
+- Layout: one text column, max 640px, 16px side gutter. Header is just the logo, the language switch and the theme switch
 - Every colour goes through a `--color-*` custom property. Never hard-code a hex outside
   the two palette blocks at the top of `style.css`
 

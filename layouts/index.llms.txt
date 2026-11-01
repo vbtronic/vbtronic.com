@@ -4,9 +4,9 @@
 > {{ site.Params.description }}
 
 - Site: {{ site.BaseURL }}
-- Author: {{ site.Params.author }}, Prague, Czech Republic
+- Author: {{ site.Params.author }}, Prague, Czech Republic; student at Mensa gymnázium
 - Contact: vb@vbtronic.com
-- Language: English
+- Languages: English (default, {{ site.BaseURL }}), Czech ({{ site.BaseURL }}cs/)
 - Studio: Bruncsoft (https://bruncsoft.com), a one-person student studio, not a company
 - Built with: Hugo and AI tools (Amp, Claude Code)
 - Updated: {{ now.Format "2006-01-02" }}
